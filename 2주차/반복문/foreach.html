@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script>
+//오로지 array 객체에서만 사용가능한 메서드
+/*
+화살표 함수는 ES6문법입니다.
+function 키워드 사용해서 함수를 만든 것보다 간단히 함수를 표현할 수 있습니다.
+화살표 함수는 항상 익명입니다.
+
+// 일반 함수
+var foo = function () { console.log("foo") }; // foo
+
+// 화살표 함수
+var bar = () => console.log("bar"); // bar
+*/
+  let array1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+  array1.forEach(element => document.write(element));
+  document.write('<br>');
+
+  for(let i=0; i<array1.length; i++) {
+  	document.write(array1[i]);
+  }
+</script>
+
+<body>
+
+</body>
+
+</html>

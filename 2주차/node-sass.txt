@@ -1,0 +1,25 @@
+﻿//아톰 편하게 사용방법
+
+remote sncy 
+
+
+node.js 설치가 되어있어야함 node-sass
+
+npm install -g node-sass 
+
+node-sass -v
+
+
+//scss 파일 밖에 css파일 생성
+node-sass --watch scss --output css
+
+
+/// compile : compressed( 한줄 ), compact(여러룰셋을 한줄 ), expanded (표준), nested(sass유사형식) ///
+node-sass --output-style compact --watch scss/style --output dev/css
+
+
+컨트롤+c =>프로그램 종료
+
+
+
+참고 사이트 : https://poiemaweb.com/sass-basics

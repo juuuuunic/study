@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  $(function(){
+      var p = '<p>fon-size</p>',
+          s = 'fs-';
+      for(i=5; i<34; i++){
+        var ps = $(p).addClass(s +i *2);
+        $('body').append(ps);
+      }
+  });
+</script>
+
+</html>

@@ -1,0 +1,12 @@
+div{
+  width: 500px;
+  height: 500px;
+  background: #ccc;
+  @include transition((all 0.3s));
+}
+
+
+span{width: 200px; height: 200px; }
+
+
+div::after{content: '안녕하세요'; font-size:30px; color: #333;display: block;}

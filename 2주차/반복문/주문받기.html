@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script type="text/javascript">
+
+
+/*콘솔에서 메뉴보기*/
+console.log("1. 커피");
+console.log("2. 라떼");
+console.log("3. 티");
+
+
+
+  var count = 0;//주문 횟수 변수 선언 및 초기화
+
+  while (count < 2) {// 메뉴 두개 고를 수 있도옥 설정
+    var choice = parseInt(prompt("메뉴선택!!!메뉴는 콘솔을 보시오! "));
+
+    console.log(choice + "번 메뉴를 선택하셨습니다.");
+
+    switch (choice) {
+      case 1:
+    console.log("아아는 1500원");
+      break;
+
+      case 2:
+    console.log("라떼는 2000원");
+      break;
+
+      case 3:
+    console.log("홍차는 2500원");
+      break;
+
+
+      default:
+      console.log("메뉴에 없습니다.");
+      break;
+    };
+    count++; //반복문을 맞치기 전에 카운터 증가
+  };
+  console.log("안녕히 가세요");
+
+</script>
+<body>
+
+</body>
+</html>

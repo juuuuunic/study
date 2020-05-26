@@ -1,2 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
+p {
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: lightcoral;
+  font-size: 30px;
+}
 
-/*# sourceMappingURL=data:application/json;base64,ewoJInZlcnNpb24iOiAzLAoJImZpbGUiOiAiRDovZGFuL2V4YW1wbGUvY29sb3JmdWxfdGV4dF9hbmltYXRpb24vY3NzL2NvbW1vbi5jc3MiLAoJInNvdXJjZXMiOiBbCgkJIkQ6L2Rhbi9leGFtcGxlL2NvbG9yZnVsX3RleHRfYW5pbWF0aW9uL3Njc3MvY29tbW9uLnNjc3MiCgldLAoJInNvdXJjZXNDb250ZW50IjogWwoJCSJAbWl4aW4gdHJhbnNmb3JtKCRwcm9wZXJ0eSkge1xyXG4gIC13ZWJraXQtdHJhbnNmb3JtOiAkcHJvcGVydHk7XHJcbiAgLW1zLXRyYW5zZm9ybTogJHByb3BlcnR5O1xyXG4gIC1tb3otdHJhbnNmb3JtOiAkcHJvcGVydHk7XHJcbiAgLW8tdHJhbnNmb3JtOiAkcHJvcGVydHk7XHJcbiAgdHJhbnNmb3JtOiAkcHJvcGVydHk7XHJcbn1cclxuQG1peGluIGJveHNoYWRvdygkcHJvcGVydHkpIHtcclxuICAtd2Via2l0LWJveC1zaGFkb3c6ICRwcm9wZXJ0eTtcclxuICAtbXMtYm94LXNoYWRvdzogJHByb3BlcnR5O1xyXG4gIC1tb3otYm94LXNoYWRvdzogJHByb3BlcnR5O1xyXG4gIC1vLWJveC1zaGFkb3c6ICRwcm9wZXJ0eTtcclxuICBib3gtc2hhZG93OiAkcHJvcGVydHk7XHJcbn1cclxuXHJcbkBtaXhpbiBiYWNrZ3JvdW5kLWdyYWRpZW50KCRwcm9wZXJ0eSkge1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IC13ZWJraXQtJHByb3BlcnR5O1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IC1tb3otJHByb3BlcnR5O1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IC1vLSRwcm9wZXJ0eTtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiAtbXMtJHByb3BlcnR5O1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6ICRwcm9wZXJ0eTtcclxufVxyXG5cclxuQG1peGluIHRyYW5zaXRpb24oJHByb3BlcnR5KSB7XHJcbiAgLXdlYmtpdC10cmFuc2l0aW9uOiAkcHJvcGVydHk7XHJcbiAgLW1zLXRyYW5zaXRpb246ICRwcm9wZXJ0eTtcclxuICAtby10cmFuc2l0aW9uOiAkcHJvcGVydHk7XHJcbiAgLW1vei1yYW5zaXRpb246ICRwcm9wZXJ0eTtcclxuICB0cmFuc2l0aW9uOiAkcHJvcGVydHk7XHJcbn1cclxuQG1peGluIHRyYW5zaXRpb24tcHJvcGVydHkoJHByb3BlcnR5KSB7XHJcbiAgLXdlYmtpdC10cmFuc2l0aW9uLXByb3BlcnR5OiAkcHJvcGVydHk7XHJcbiAgLW1zLXRyYW5zaXRpb24tcHJvcGVydHk6ICRwcm9wZXJ0eTtcclxuICAtby10cmFuc2l0aW9uLXByb3BlcnR5OiAkcHJvcGVydHk7XHJcbiAgLW1vei10cmFuc2l0aW9uLXByb3BlcnR5OiAkcHJvcGVydHk7XHJcbiAgdHJhbnNpdGlvbi1wcm9wZXJ0eTogJHByb3BlcnR5O1xyXG59XHJcbiIKCV0sCgkibmFtZXMiOiBbXSwKCSJtYXBwaW5ncyI6ICIiCn0= */
+input[type="button"] {
+  -webkit-transform: translate(50px, 50px);
+  transform: translate(50px, 50px);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: blueviolet;
+  border: 0;
+}
+/*# sourceMappingURL=common.css.map */

@@ -1,9 +1,11 @@
-@mixin transform($property) {
-  -webkit-transform: $property;
-  -ms-transform: $property;
-  -moz-transform: $property;
-  -o-transform: $property;
-  transform: $property;
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
+
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
 }
 @mixin boxshadow($property) {
   -webkit-box-shadow: $property;
@@ -34,4 +36,52 @@
   -o-transition-property: $property;
   -moz-transition-property: $property;
   transition-property: $property;
+}
+
+@mixin button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+@mixin border {
+  -webkit-border: none;
+  -moz-border: none;
+  -ms-border: none;
+  -o-border: none;
+  border: none;
+}
+
+// translate
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+
+p {
+  @include translate(-50%,-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: lightcoral;
+  font-size: 30px;
+}
+
+input[type="button"] {
+  @include translate(50px, 50px);
+  @include button;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: blueviolet;
+  border: 0;
 }

@@ -1,1 +1,220 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:300);body{background-color:#1a1a1a;color:#fefefe;font-family:'Ubuntu';text-transform:uppercase;font-size:2em;line-height:2;font-weight:bold;text-rendering:optimizeLegibility;text-align:center}.container{position:absolute;top:50%;left:50%;width:100%;transform:translate(-50%, -50%)}.txt{display:block}a{text-decoration:none;position:absolute;bottom:10px;right:10px;text-align:right;color:#eee;font-size:35px;line-height:15px}.anim-text-flow span{animation-name:anim-text-flow-keys;animation-duration:50s;animation-direction:alternate;animation-fill-mode:forwards}@keyframes anim-text-flow-keys{0%{color:#5cd6d0}5%{color:#5cd6a3}10%{color:#5c70d6}15%{color:#d6725c}20%{color:#d68b5c}25%{color:#5cd6cc}30%{color:#95d65c}35%{color:#5cd683}40%{color:#d6685c}45%{color:#97d65c}50%{color:#99d65c}55%{color:#5cd685}60%{color:#5cd6be}65%{color:#d6665c}70%{color:#5c9dd6}75%{color:#685cd6}80%{color:#5c91d6}85%{color:#5c93d6}90%{color:#abd65c}95%{color:#745cd6}100%{color:#5c99d6}}.anim-text-flow span:nth-of-type(1){animation-delay:-.8s}.anim-text-flow span:nth-of-type(2){animation-delay:-.6s}.anim-text-flow span:nth-of-type(3){animation-delay:-.4s}.anim-text-flow span:nth-of-type(4){animation-delay:-.2s}.anim-text-flow span:nth-of-type(5){animation-delay:0s}
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
+body {
+  background-color: #1a1a1a;
+  color: #fefefe;
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+  font-size: 2em;
+  line-height: 2;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.txt {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
+  color: #eee;
+  font-size: 35px;
+  line-height: 15px;
+}
+
+/*
+ * Animation module with all animation code
+ */
+.anim-text-flow {
+  /*
+   * Animation variables
+   */
+  /*
+   * Keyframe loop
+   */
+  /*
+   * Element animation delay loop
+   */
+}
+
+.anim-text-flow span {
+  -webkit-animation-name: anim-text-flow-keys;
+          animation-name: anim-text-flow-keys;
+  -webkit-animation-duration: 50s;
+          animation-duration: 50s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes anim-text-flow-keys {
+  0% {
+    color: #d6b65c;
+  }
+  5% {
+    color: #78d65c;
+  }
+  10% {
+    color: #d6745c;
+  }
+  15% {
+    color: #d69b5c;
+  }
+  20% {
+    color: #5cc6d6;
+  }
+  25% {
+    color: #d0d65c;
+  }
+  30% {
+    color: #5cd0d6;
+  }
+  35% {
+    color: #d6be5c;
+  }
+  40% {
+    color: #5c76d6;
+  }
+  45% {
+    color: #5cd69d;
+  }
+  50% {
+    color: #5cc4d6;
+  }
+  55% {
+    color: #5cd6c8;
+  }
+  60% {
+    color: #5c74d6;
+  }
+  65% {
+    color: #5cadd6;
+  }
+  70% {
+    color: #d6ad5c;
+  }
+  75% {
+    color: #d6af5c;
+  }
+  80% {
+    color: #d6895c;
+  }
+  85% {
+    color: #5c5cd6;
+  }
+  90% {
+    color: #97d65c;
+  }
+  95% {
+    color: #5cd6b8;
+  }
+  100% {
+    color: #b8d65c;
+  }
+}
+
+@keyframes anim-text-flow-keys {
+  0% {
+    color: #d6b65c;
+  }
+  5% {
+    color: #78d65c;
+  }
+  10% {
+    color: #d6745c;
+  }
+  15% {
+    color: #d69b5c;
+  }
+  20% {
+    color: #5cc6d6;
+  }
+  25% {
+    color: #d0d65c;
+  }
+  30% {
+    color: #5cd0d6;
+  }
+  35% {
+    color: #d6be5c;
+  }
+  40% {
+    color: #5c76d6;
+  }
+  45% {
+    color: #5cd69d;
+  }
+  50% {
+    color: #5cc4d6;
+  }
+  55% {
+    color: #5cd6c8;
+  }
+  60% {
+    color: #5c74d6;
+  }
+  65% {
+    color: #5cadd6;
+  }
+  70% {
+    color: #d6ad5c;
+  }
+  75% {
+    color: #d6af5c;
+  }
+  80% {
+    color: #d6895c;
+  }
+  85% {
+    color: #5c5cd6;
+  }
+  90% {
+    color: #97d65c;
+  }
+  95% {
+    color: #5cd6b8;
+  }
+  100% {
+    color: #b8d65c;
+  }
+}
+
+.anim-text-flow span:nth-of-type(1) {
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+}
+
+.anim-text-flow span:nth-of-type(2) {
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
+}
+
+.anim-text-flow span:nth-of-type(3) {
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+
+.anim-text-flow span:nth-of-type(4) {
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+}
+
+.anim-text-flow span:nth-of-type(5) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+/*# sourceMappingURL=style.css.map */

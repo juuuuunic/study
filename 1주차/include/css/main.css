@@ -1,18 +1,19 @@
+@charset "UTF-8";
 * {
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 span {
-  display: inline-block
+  display: inline-block;
 }
 
 input {
-  border: 0
+  border: 0;
 }
 
 p {
-  font-size: 16px
+  font-size: 16px;
 }
 
 div {
@@ -23,17 +24,18 @@ div {
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   -moz-ransition: all 0.3s;
-  transition: all 0.3s
+  transition: all 0.3s;
 }
 
 span {
   width: 200px;
-  height: 200px
+  height: 200px;
 }
 
 div::after {
   content: '안녕하세요';
   font-size: 30px;
   color: #333;
-  display: block
+  display: block;
 }
+/*# sourceMappingURL=main.css.map */

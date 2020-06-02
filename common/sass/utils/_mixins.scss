@@ -1,0 +1,49 @@
+// float clear
+@mixin clearfix {
+    display: block;
+    height: 1px;
+    min-height: 1px;
+    &::after {
+        content: '';
+        display:block; 
+        height:0;
+        clear:both;
+        visibility:hidden;
+    }
+}
+
+// font-face
+@mixin font-face($family,$src,$style: normal,$weight: normal) {
+    @font-face {
+        font-family: $family;
+        src: url('#{$src}.eot'); // IE9 compat
+        src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+            url('#{$src}.woff') format('woff'), // standards
+            url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+            url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+
+        font-style: $style;
+        font-weight: $weight;
+    }
+}
+
+// border
+@mixin border-radius($rtl,$rtr,$rbr,$rbl) {
+    border-radius: $rtl $rtr $rbr $rbl;    
+    -webkit-border-radius: $rtl $rtr $rbr $rbl;
+    -moz-border-radius: $rtl $rtr $rbr $rbl;
+    -ms-border-radius: $rtl $rtr $rbr $rbl;
+    -o-border-radius: $rtl $rtr $rbr $rbl;
+}
+
+// placeholder
+@mixin placeholder($p_color) {
+    &::-webkit-input-placeholder {color: $p_color;}
+    &:-moz-input-placeholder {color: $p_color;}
+    &:-ms-input-placeholder {color: $p_color;}
+    &:-o-input-placeholder {color: $p_color;}
+    &::-webkit-placeholder {color: $p_color;}
+    &::-moz-placeholder {color: $p_color;}
+    &::-ms-placeholder {color: $p_color;}
+    &::-o-placeholder {color: $p_color;}
+}

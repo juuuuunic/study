@@ -7,6 +7,13 @@ $redAL : rgba(231, 76, 60, 0.95);
 $dark :  #3d3d3d;
 
 
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+  }
 @mixin transition($transition-property, $transition-time, $method) {
     -webkit-transition: $transition-property $transition-time $method;
     -moz-transition: $transition-property $transition-time $method;
@@ -14,6 +21,36 @@ $dark :  #3d3d3d;
     -o-transition: $transition-property $transition-time $method;
     transition: $transition-property $transition-time $method;
 }
+// translate
+@mixin translate($x, $y) {
+	@include transform(translate($x, $y));
+}
+  
+ 
+@mixin border {
+	-webkit-border: none;
+	-moz-border: none;
+	-ms-border: none;
+	-o-border: none;
+	border: none;
+}
+  
+@mixin button {
+	@include border;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+	border-radius: 0;
+	outline: none;
+	cursor: pointer;
+}
+
 *{ box-sizing:border-box;}
 
 
@@ -87,7 +124,20 @@ ul {
 	right: .25em;
 	top: .75em;
  	padding: .15em; 
-	font-size: 2em;
+	font-size: 20em;
 	font-weight: bold;
 	font-family: $fontSans;
  }
+
+ input[type="button"] {
+	@include translate(50px, 50px);
+	@include button;
+	position: absolute;
+	top: 500px;
+	left: 50px;
+	background-color: blueviolet;
+	border: 0;
+	font-size: 18px;
+	font-weight: bold;
+	content: '';
+}

@@ -63,6 +63,38 @@ ul li {
   right: .25em;
   top: .75em;
   padding: .15em;
-  font-size: 2em;
+  font-size: 20em;
   font-weight: bold;
   font-family: "Montserrat", sans-serif; }
+
+input[type="button"] {
+  -moz-transform: translate(50px, 50px);
+  -o-transform: translate(50px, 50px);
+  -ms-transform: translate(50px, 50px);
+  -webkit-transform: translate(50px, 50px);
+  transform: translate(50px, 50px);
+  -webkit-border: none;
+  -moz-border: none;
+  -ms-border: none;
+  -o-border: none;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 500px;
+  left: 50px;
+  background-color: blueviolet;
+  border: 0;
+  font-size: 18px;
+  font-weight: bold;
+  content: ''; }

@@ -7,13 +7,12 @@
 @import
   'utils/variables',
   'utils/mixins',
-  'utils/placeholders',
   'utils/extends',
-  'utils/funcions';
+  'utils/functions';
 
 @import
-  'components/layerpop',
-  'components/buttons';
+  'component/layerpop',
+  'component/buttons';
 
 @import
   'layout/header',

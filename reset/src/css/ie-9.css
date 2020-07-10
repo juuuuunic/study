@@ -1,0 +1,4 @@
+select { -webkit-appearance: select; -moz-appearance: select; appearance: select; background: transparent; opacity: 0; filter: alpha(opacity=0); }
+select::-ms-expand { display: block; }
+input::-ms-clear { display: block; }
+.fm-select label, .fm-select .fms-tit{opacity: 1; position: static; color: #222; display: inline-block; padding-left: 1.25em; line-height: 50px; height: 50px;}

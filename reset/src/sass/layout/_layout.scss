@@ -1,0 +1,5 @@
+#skipNav a { position: absolute; display: block; font-size: 0px; top: -9999px; left: -9999px; }
+#skipNav a:focus { position: absolute; top: 0; left: 0; width: 100%; height: 40px; line-height: 40px; background: #333; color: #fff; font-size: 20px; z-index: 9999; text-align: center; }
+#container { width: 100%; position: relative; overflow: hidden; }
+.wrap { width: 95%; max-width: 1200px; margin-left: auto; margin-right: auto; }
+.wrap img { width: 100%; }

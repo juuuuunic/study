@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Star</title>
+    <link type="text/css" rel="stylesheet" href="/study/css/reset.css">
+    <script type="text/javascript" src="/study/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+        });
+    </script>
+
+    <!--IE9만 적용 -->
+	<!--[if IE 9]>
+		<script src="/js/ie-9.js"></script>
+    	<link rel="stylesheet" type="text/css" href="/css/ie-9.css" />
+    <![endif]-->
+    
+    <style>
+        body {color: #272822; font-size: 14px !important; line-height: 1.5; padding: 10px 20px;}
+        .wrap {width: 95%; max-width: 1200px; margin-left: auto; margin-right: auto;}
+        .title {font-size: 20px; font-weight: bold;}
+        .code {display: inline-block; color: #fff; background-color: #272822; padding: 10px 20px 10px 10px; box-sizing: border-box;}
+        .red {color: #f92672;}
+        .violet {color: #ae81ff;}
+        .pink {color: #cf65a2;}
+        .blue {color: #66d9ef;}
+        .green {color: #8ae229;}
+        .yellow {color: #ffd712;}
+        .lemon {color: #e6db74;}
+        .italic {font-style: italic;}
+        .underline {text-decoration: underline;}
+        .run {padding-left: 20px;}
+        table th, table td {vertical-align: middle; padding: 10px 0px 10px 20px;}
+        table td:first-child {color: #fff; background-color: #272822; border-bottom: 1px solid #fff;}
+        table tr+tr td {border-top: 1px solid #aaa;}
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <!--for문-->
+        <div class="test type01">
+            <h1 class="title red">for문</h1>
+            <table class="type02" width="100%">
+                <colgroup>
+                    <col width="50%;">
+                    <col width="50%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>input</th>
+                        <th>output</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>    
+                        <!--input-->                
+                        <td>
+                            <div class="access">
+                                <span class="red">for</span>
+                                <span class="pink">(</span>
+                                <span>처음</span><strong class="violet italic">(1)</strong> ;&nbsp; 
+                                <span>조건</span><strong class="violet italic">(2)</strong> ;&nbsp; 
+                                <span>끝</span><strong class="violet italic">(4)</strong> ; 
+                                <span class="pink">)</span> <span class="yellow">{</span>
+                            </div>
+                            <div class="run">
+                                실행<strong class="green">(3)</strong>
+                            </div>
+                            <span class="yellow">}</span>
+                        </td>
+                        <!--//input--> 
+    
+                        <!--output-->   
+                        <td>조건이 true일 때 2, 3, 4가 반복한다.</td>
+                        <!--output-->   
+                    </tr>
+                    
+                    <tr>
+                        <!--input-->
+                        <td>
+                            <div class="access">
+                                <span class="red">for</span>
+                                <span class="pink">(</span>
+                                <span class="blue italic">var</span>&nbsp; 
+                                star<span class="red">=</span> <span class="violet">1</span>; 
+                                star <span class="red"><=</span> <span class="violet">5</span>; 
+                                star<span class="red"> +=</span> <span class="violet">1</span>
+                                <span class="pink">)</span> <span class="yellow">{</span>
+                            </p>
+                            <div class="run">
+                                console.<span class="green">log</span> <span class="blue">(</span> <span class="lemon">"*"</span> <span class="blue">)</span>
+                            </div>
+                            <span class="yellow">}</span>
+                        </td>
+                        <!--//input-->
+    
+                        <!--output-->   
+                        <td>'&emsp;' + '*' &nbsp; === &nbsp; '&emsp;*'</td>
+                        <!--//output-->   
+                    </tr>
+                    
+                    <tr>
+                        <!--input-->
+                        <td>
+                            <div class="access">
+                                <span class="red">for</span>
+                                <span class="pink">(</span>
+                                <span class="blue italic">var</span>&nbsp; 
+                                star<span class="red">=</span> <span class="violet">5</span>; 
+                                star <span class="red">>=</span> <span class="violet">1</span>; 
+                                star<span class="red"> -=</span> <span class="violet">1</span>
+                                <span class="pink">)</span> <span class="yellow">{</span>
+                            </div>
+                            <div class="run">
+                                console.<span class="green">log</span>
+                                <span class="blue">(</span>
+                                <span class="lemon">"*"</span>.
+                                <span class="green">repeat</span><span class="yellow">(</span> star <span class="yellow">)</span><span class="blue">)</span>
+                            </div>   
+                            <span class="yellow">}</span>
+                        </td>
+                        <!--//input-->
+    
+                        <!--output-->   
+                        <td></td>
+                        <!--//output-->   
+                    </tr>
+    
+                    <tr>
+                        <!--input-->
+                        <td>
+                            <div class="access">
+                                <span class="red">for</span>
+                                <span class="pink">(</span>
+                                <span class="blue italic">var</span>&nbsp; 
+                                star<span class="red">=</span> <span class="violet">10</span>; 
+                                star <span class="red">>=</span> <span class="violet">2</span>; 
+                                star<span class="red"> =</span> star <span class="red">-</span><span class="violet"> 2</span>
+                                <span class="pink">)</span> <span class="yellow">{</span>
+                            </div>
+                            <div class="run">
+                                console.<span class="green">log</span>
+                                <span class="blue">(</span>
+                                <span class="lemon">"*"</span>.
+                                <span class="green">repeat</span><span class="yellow">(</span> star <span class="yellow">)</span><span class="blue">)</span>
+                            </div>   
+                            <span class="yellow">}</span>
+                        </td>
+                        <!--//input-->
+    
+                        <!--output-->   
+                        <td></td>
+                        <!--//output-->   
+                    </tr>
+    
+                    <tr>
+                        <!--input-->
+                        <td>
+                            <div class="access">
+                                <span class="red">for</span>
+                                <span class="pink">(</span>
+                                <span class="blue italic">var</span>&nbsp; 
+                                star<span class="red">=</span> <span class="violet">1</span>; 
+                                star <span class="red"><=</span> <span class="violet">16</span>; 
+                                star<span class="red"> *=</span><span class="violet"> 2</span>
+                                <span class="pink">)</span> <span class="yellow">{</span>
+                            </p>
+                            <div class="run">
+                                console.<span class="green">log</span>
+                                <span class="blue">(</span>
+                                <span class="lemon">"*"</span>.
+                                <span class="green">repeat</span><span class="yellow">(</span> star <span class="yellow">)</span><span class="blue">)</span>
+                            </div>                        
+                            <span class="yellow">}</span><br>                
+                            console.<span class="green">log</span>
+                            <span class="yellow">(</span> <span class="lemon">"star: "</span>, star <span class="yellow">)</span>
+                        </td>
+                        <!--//input-->
+    
+                        <!--output-->   
+                        <td></td>
+                        <!--//output-->   
+                    </tr>
+    
+                    <tr>
+                        <!--input-->
+                        <td>
+                            <div class="access">
+                                <span class="red">for</span>
+                                <span class="pink">(</span>
+                                <span class="blue italic">var</span>&nbsp; 
+                                star<span class="red">=</span> <span class="violet">5</span>; 
+                                star <span class="red">>=</span> <span class="violet">1</span>; 
+                                star<span class="red"> -=</span><span class="violet"> 1</span>
+                                <span class="pink">)</span> <span class="yellow">{</span>
+                            </div>
+                            <div class="run">
+                                console.<span class="green">log</span>
+                                <span class="blue">(</span>
+                                <span class="lemon">"&ensp;"</span>.
+                                <span class="green">repeat</span>
+                                <span class="yellow">(</span>
+                                <span class="violet">5</span> <span class="red">-</span>  star <span class="yellow">)</span>
+                                <span class="red">+</span>
+                                <span class="lemon">"*"</span>.
+                                <span class="green">repeat</span>
+                                <span class="yellow">(</span> star <span class="yellow">)</span><span class="blue">)</span>
+                            </div>       
+                            <span class="yellow">}</span>        
+                        </td>
+                        <!--//input-->
+    
+                        <!--output-->   
+                        <td></td>
+                        <!--//output-->   
+                    </tr>
+    
+                    <tr>
+                        <!--input-->
+                        <td>
+                            <div class="access">
+                                <span class="red">for</span>
+                                <span class="pink">(</span>
+                                <span class="blue italic">var</span>&nbsp; 
+                                star<span class="red">=</span> <span class="violet">9</span>; 
+                                star <span class="red">>=</span> <span class="violet">1</span>; 
+                                star<span class="red"> -=</span><span class="violet"> 2</span>
+                                <span class="pink">)</span> <span class="yellow">{</span>
+                            </div>
+                            <div class="run">
+                                console.<span class="green">log</span>
+                                <span class="blue">(</span>
+                                <span class="lemon">"&ensp;"</span>.
+                                <span class="green">repeat</span>
+                                <span class="yellow">(</span>
+                                <span class="violet">9</span> <span class="red">-</span>  star <span class="yellow">)</span>
+                                <span class="red">+</span>
+                                <span class="lemon">"*"</span>.
+                                <span class="green">repeat</span>
+                                <span class="yellow">(</span> star <span class="yellow">)</span><span class="blue">)</span>
+                            </div>          
+                            <span class="yellow">}</span>     
+                        </td>
+                        <!--//input-->
+    
+                        <!--output-->   
+                        <td></td>
+                        <!--//output-->   
+                    </tr>
+    
+                    <tr>
+                        <!--input-->
+                        <td>
+                            <div class="access">
+                                <span class="red">for</span>
+                                <span class="pink">(</span>
+                                <span class="blue italic">var</span>&nbsp; 
+                                star<span class="red">=</span> <span class="violet">9</span>; 
+                                star <span class="red">>=</span> <span class="violet">1</span>; 
+                                star<span class="red"> -=</span><span class="violet"> 2</span>
+                                <span class="pink">)</span> <span class="yellow">{</span>
+                            </div>
+                            <div class="run">
+                                console.<span class="green">log</span>
+                                <span class="blue">(</span>
+                                <span class="lemon">"&ensp;"</span>.
+                                <span class="green">repeat</span><span class="blue">(</span>
+                                <span class="yellow">(</span>
+                                <span class="violet">9</span> <span class="red">-</span>  star <span class="yellow">)</span>
+                                <span class="red">/</span> <span class="violet">2</span> <span class="blue">)</span>
+                                <span class="red">+</span>
+                                <span class="lemon">"*"</span>.
+                                <span class="green">repeat</span>
+                                <span class="yellow">(</span> star <span class="yellow">)</span><span class="blue">)</span>
+                            </div>       
+                            <span class="yellow">}</span>        
+                        </td>
+                        <!--//input-->
+    
+                        <!--output-->   
+                        <td></td>
+                        <!--//output-->   
+                    </tr>
+
+                    <tr>
+                        <!--input-->
+                        <td>
+                            <div class="access">
+                                <span class="red">for</span>
+                                <span class="pink">(</span>
+                                <span class="blue italic">var</span>&nbsp; 
+                                star<span class="red">=</span> <span class="violet">-4</span>; 
+                                star <span class="red"><=</span> <span class="violet">5</span>; 
+                                star<span class="red"> +=</span><span class="violet"> 2</span>
+                                <span class="pink">)</span> <span class="yellow">{</span>
+                            </p>
+                            <div class="run">
+                                console.<span class="green">log</span>
+                                <span class="pink">(</span>
+                                <span class="lemon">"&ensp;"</span>.
+                                <span class="green">repeat</span><span class="blue">(</span>
+                                <span class="green underline">Math</span>.<span class="green">abs</span>
+                                <span class="yellow">(</span>
+                                star<span class="red">/</span> <span class="violet">2</span>
+                                <span class="yellow">)</span><span class="blue">)</span>
+                                <span class="red">+</span>
+                                <span class="lemon">"*"</span>.
+                                <span class="green">repeat</span><span class="blue">(</span>
+                                <span class="violet">5</span> <span class="pink">-</span>
+                                <span class="green underline">Math</span>.<span class="green">abs</span>
+                                <span class="yellow">(</span> star <span class="yellow">)</span><span class="blue">)</span><span class="pink">)</span>
+                            </div>       
+                            <span class="yellow">}</span>        
+                        </td>
+                        <!--//input-->
+    
+                        <!--output-->   
+                        <td rowspan=""></td>
+                        <!--//output-->   
+                    </tr>
+                    
+                    <tr>
+                        <!--input-->
+                        <td>
+                            <div class="access">
+                                <span class="red">for</span>
+                                <span class="yellow">(</span>
+                                <span class="blue italic">var</span>&nbsp; 
+                                star<span class="red">=</span> <span class="violet">9</span>; 
+                                star <span class="red">>=</span> <span class="violet">1</span>; 
+                                star<span class="red"> -=</span><span class="violet"> 2</span>
+                                <span class="yellow">)</span> <span class="yellow">{</span>
+                            </div>
+                            
+                            <div class="run">
+                                <span class="red">if</span><span class="pink">(</span>
+                                star <span class="red">></span> <span class="violet">5</span>
+                                <span class="pink">)</span>
+                                <span class="pink">{</span>
+                                <div class="run">
+                                    console.<span class="green">log</span>
+                                    <span class="blue">(</span>
+                                    <span class="lemon">"&ensp;"</span>.
+                                    <span class="green">repeat</span><span class="yellow">(</span><span class="pink">(</span>
+                                    star <span class="red">-</span> <span class="violet">5</span>
+                                    <span class="pink">)</span> <span class="red">/</span> <span class="violet">2</span><span class="yellow">)</span>
+                                    <span class="red">+</span>
+                                    <span class="lemon">"*"</span>.
+                                    <span class="green">repeat</span><span class="yellow">(</span>
+                                    <span class="violet">10</span> <span class="red">-</span> star
+                                    <span class="yellow">)</span><span class="blue">)</span>
+                                </div>     
+                                
+                                <span class="pink">}</span>
+                                <span class="red">else</span>
+                                <span class="pink">{</span>
+                                    <div class="run">
+                                        console.<span class="green">log</span>
+                                        <span class="blue">(</span>
+                                        <span class="lemon">"&ensp;"</span>.
+                                        <span class="green">repeat</span><span class="yellow">(</span><span class="pink">(</span>
+                                        <span class="violet">5</span> <span class="red">-</span> star
+                                        <span class="pink">)</span> <span class="red">/</span> <span class="violet">2</span><span class="yellow">)</span>
+                                        <span class="red">+</span>
+                                        <span class="lemon">"*"</span>.
+                                        <span class="green">repeat</span><span class="yellow">(</span>
+                                        star
+                                        <span class="yellow">)</span><span class="blue">)</span>
+                                    </div>  
+                                <span class="pink">}</span>
+                            </div>
+                            <!--//input-->
+                            <span class="yellow">}</span>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                //forStar();
+                //forStarRepeat();
+                //forStarReverse();
+                //forStarEg_01();
+                //forStarEg_02();
+                //forStarEg_03();
+                //forStarEg_04();
+                //forStarEg_05();
+                //forStarEg_06();
+                //forStarEg_07();
+                forStarEg_08();
+            });
+    
+            function forStar() {
+                for(var star=1; star <= 5; star+=1) {
+                    console.log("*")
+                }
+            }
+            function forStarRepeat() {
+                for(var star=1; star <= 5; star+=1) {
+                    console.log("*".repeat(star))
+                    //$(".appendHtml").html('*'.repeat(star))
+                }
+            }
+            function forStarReverse() {
+                for(var star=5; star >= 1; star-=1) {
+                    console.log("*".repeat(star))
+                }
+            }
+            function forStarEg_01() {
+                for(var star=10; star >= 2; star=star-2) {
+                    console.log("*".repeat(star))
+                }
+            }
+            function forStarEg_02() {
+                for(var star=1; star <= 16; star*=2) {
+                    console.log("*".repeat(star))
+                }            
+                console.log("star: ", star);
+            }
+            function forStarEg_03() {
+                for(var star=5; star >= 1; star-=1) {
+                    console.log(' '.repeat(5 - star) + "*".repeat(star))
+                }
+            }
+            function forStarEg_04() {
+                for(var star=9; star >= 1; star-=2) {
+                    console.log(' '.repeat(9 - star) + "*".repeat(star))
+                }
+            }
+            function forStarEg_05() {
+                for(var star=9; star >= 1; star-=2) {
+                    console.log(' '.repeat((9 - star)/2) + "*".repeat(star))
+                    //console.log(' '.repeat(9 - (star+1)) + "*".repeat(star)) //값이 음수-> RangeError
+                }
+            }
+            function forStarEg_06() {
+                for(var star=0; star<5; star+=1) {
+                    console.log("*".repeat(star))
+                }
+            }
+            function forStarEg_07() {
+                for(var star=0; star<5; star+=1) {
+                    console.log("*".repeat(star+1))
+                }
+            }
+            function forStarEg_08() {
+                for(var star=-4; star<=5; star+=2){
+                    //Math.abs(숫자): 숫자의 절대값 함수
+                    //Math.abs(-2) = 2
+                    // " "
+                    // star: -4,-2,0,2,4
+                    // (star/2): -2,-1,0,,2
+                    console.log(" ".repeat(Math.abs(star/2)) + "*".repeat(5-Math.abs(star)))
+                    
+                }
+                for(var star=4; star>=-4; star-=2){
+                    //console.log(" ".repeat(Math.abs((star)/2)) + '*'.repeat(4-Math.abs(star)+1)) ;
+                }
+                for(var star=-2; star<=2; star++){
+                    //console.log(" ".repeat(Math.abs(star))+'*'.repeat(5-(Math.abs(star)*2)));
+                }
+                for(var star=1; star<=5; star++){
+                   //console.log(" ".repeat(Math.abs(star-3)) + '*'.repeat(5-(Math.abs((star-3)*2))));
+                    //console.log((star-3))
+                }
+                for(var star=9; star>=1; star-=2) {
+                    if(star>5) {
+                        //7,9
+                        console.log(' '.repeat((star-5)/2) + '*'.repeat(10-star));
+                    } else {
+                        //1,3,5
+                        console.log(' '.repeat((5-star)/2) + '*'.repeat(star));
+                    }
+                }
+            }
+        </script>
+        <!--//for문-->
+
+        
+        <!---->
+        <div class="test type02">
+            <h1 class="title">
+                <strong class="red"></strong>
+            </h1>
+            <table class="type02" width="100%">
+                <colgroup></colgroup>
+                <thead>
+                    <tr>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>        
+        <!--//-->
+
+    </div>
+
+    
+    
+
+
+
+
+
+    <!-- table type01
+        <table class="type01" width="100%">
+        <colgroup>
+            <col width="10%" />
+            <col width="*" />
+        </colgroup>
+        <tbody>
+            <tr>
+                <th>input</th>
+                <td>
+                    <div class="access">
+                        <span class="red">for</span>
+                        <span class="pink">(</span>
+                        <span>처음</span><strong class="blue italic">(1)</strong> ;&nbsp; 
+                        <span>조건</span><strong class="blue italic">(2)</strong> ;&nbsp; 
+                        <span>끝</span><strong class="blue italic">(4)</strong> ; 
+                        <span class="pink">)</span> <span class="yellow">{</span>
+                    </div>
+                    <div class="run">
+                        실행<strong class="green">(3)</strong>
+                    </div>
+                    <span class="yellow">}</span>
+                </td>
+                <td>
+                    <div class="access">
+                        <span class="red">for</span>
+                        <span class="pink">(</span>
+                        <span class="blue italic">var</span>&nbsp; 
+                        star<span class="red">=</span> <span class="violet">1</span>; 
+                        star <span class="red"><=</span> <span class="violet">5</span>; 
+                        star<span class="red">+=</span> <span class="violet">1</span>
+                        <span class="pink">)</span> <span class="yellow">{</span>
+                    </p>
+                    <div class="run">
+                        console.<span class="green">log</span> <span class="blue">(</span> <span class="lemon">"*"</span> <span class="blue">)</span>
+                    </div>
+                    <span class="yellow">}</span>
+                </td>
+            </tr>
+            <tr>
+                <th>output</th>
+            </tr>
+        </tbody>
+    </table> 
+    -->
+</body>
+</html>

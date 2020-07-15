@@ -1,19 +1,3 @@
-// font-face
-@mixin font-face($font-name, $path, $style: normal, $weight: normal) {
-    @font-face {
-      font-family: $font-name;
-      font-style: $style;
-      font-weight: $weight;
-      src: url($path+".eot"); // IE9 compat
-      src: url($path+".eot?#iefix") format("embedded-opentype"), // IE8 and below
-           url($path+".woff2") format("woff2"), // except IE
-           url($path+".woff") format("woff"), // standards
-           url($path+".otf") format("otf"); // Android, iOS
-        //    url($path+".ttf") format("truetype"), 
-        //    url($path+".svg##{$font-name}") format("svg");
-    }
-}
-
 // font-size
 @mixin font-size($font-size, $line-height: normal) {
     font-size: $font-size * 1px;

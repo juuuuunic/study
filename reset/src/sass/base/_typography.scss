@@ -1,7 +1,88 @@
-@include font-face(Noto Sans KR, '/font/NotoSansKR-Thin', 100, normal);
-@include font-face(Noto Sans KR, '/font/NotoSansKR-Light', 200, normal);
-@include font-face(Noto Sans KR, '/font/NotoSansKR-DemiLight', 300, normal);
-@include font-face(Noto Sans KR, '/font/NotoSansKR-Regular', 400, normal);
-@include font-face(Noto Sans KR, '/font/NotoSansKR-Medium', 600, normal);
-@include font-face(Noto Sans KR, '/font/NotoSansKR-Bold', 700, normal);
-@include font-face(Noto Sans KR, '/font/NotoSansKR-Black', 900, normal);
+$noto-sans-korean-path: "../../fonts/NotoSans/";
+$font-name: "NotoSansKR";
+
+$roboto-path: "../../fonts/Roboto/";
+$font-name2: "roboto-v20-latin";
+
+$metropolis-path: "../../fonts/Metropolis/";
+$font-name3: "Metropolis";
+
+// font-face mixin
+@mixin font-face(
+  $font-family,
+  $font-path,
+  $font-weight: null,
+  $num : null,
+  $font-style: null,
+  $exts: woff2 woff eot otf
+) {
+
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($font-family, " ", "_")
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($font-path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+
+
+  @if $num{
+     @font-face {
+      font-family: quote($font-family);
+      src: $src;
+      unicode-range: U+0030-0039;
+      font-style: $font-style;
+      font-weight: $font-weight;
+    }
+  }
+
+  @else{
+    @font-face {
+      font-family: quote($font-family);
+      src: $src;
+      font-style: $font-style;
+      font-weight: $font-weight;
+    }
+  }
+}
+
+
+/*font : Noto Sans Korean*/
+@include font-face("Noto Sans Korean", $noto-sans-korean-path + $font-name + "-Thin", 100);
+@include font-face("Noto Sans Korean", $noto-sans-korean-path + $font-name + "-Light", 200);
+@include font-face("Noto Sans Korean", $noto-sans-korean-path + $font-name + "-DemiLight", 300);
+@include font-face("Noto Sans Korean", $noto-sans-korean-path + $font-name + "-Regular", 400);
+@include font-face("Noto Sans Korean", $noto-sans-korean-path + $font-name + "-Medium", 500);
+@include font-face("Noto Sans Korean", $noto-sans-korean-path + $font-name + "-Bold", 700);
+@include font-face("Noto Sans Korean", $noto-sans-korean-path + $font-name + "-Black", 900);
+
+
+/*font : roboto*/
+@include font-face("Roboto", $roboto-path + $font-name2 + "-100", 100);
+@include font-face("Roboto", $roboto-path + $font-name2 + "-300", 300);
+@include font-face("Roboto", $roboto-path + $font-name2 + "-regular", 400);
+@include font-face("Roboto", $roboto-path + $font-name2 + "-500", 500);
+@include font-face("Roboto", $roboto-path + $font-name2 + "-700", 700);
+@include font-face("Roboto", $roboto-path + $font-name2 + "-900", 900);
+
+
+/*font : metropolis ㅣ roboto - NUMBER*/
+@include font-face("Roboto", $metropolis-path + $font-name3 + "-Regular", 100, 'num');
+@include font-face("Roboto", $metropolis-path + $font-name3 + "-Regular", 200, 'num');
+@include font-face("Roboto", $metropolis-path + $font-name3 + "-Regular", 300, 'num');
+@include font-face("Roboto", $metropolis-path + $font-name3 + "-Regular", 400, 'num');
+
+@include font-face("Roboto", $metropolis-path + $font-name3 + "-Bold", 500, 'num');
+@include font-face("Roboto", $metropolis-path + $font-name3 + "-Bold", 700, 'num');
+@include font-face("Roboto", $metropolis-path + $font-name3 + "-Bold", 900, 'num');

@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <link type="text/css" rel="stylesheet" href="/study/css/reset.css">
+    <script type="text/javascript" src="/study/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+        });
+    </script>
+
+    <!--IE9만 적용 -->
+	<!--[if IE 9]>
+		<script src="/js/ie-9.js"></script>
+    	<link rel="stylesheet" type="text/css" href="/css/ie-9.css" />
+    <![endif]-->
+    
+    <style>
+        body {color: #272822; font-size: 14px !important; line-height: 1.5; padding: 10px 20px;}
+        .wrap {width: 95%; max-width: 1200px; margin-left: auto; margin-right: auto;}
+        .title {font-size: 20px; font-weight: bold;}
+        .code {display: inline-block; color: #fff; background-color: #272822; padding: 10px 20px 10px 10px; box-sizing: border-box;}
+        .red {color: #f92672;}
+        .violet {color: #ae81ff;}
+        .pink {color: #cf65a2;}
+        .blue {color: #66d9ef;}
+        .green {color: #8ae229;}
+        .yellow {color: #ffd712;}
+        .lemon {color: #e6db74;}
+        .orange {color: #fd971f;}
+        .italic {font-style: italic;}
+        .underline {text-decoration: underline;}
+        .run {padding-left: 20px;}
+        table th, table td {vertical-align: middle; padding: 10px 0px 10px 20px;}
+        table td:first-child {color: #fff; background-color: #272822; border-bottom: 1px solid #fff;}
+        table tr+tr td {border-top: 1px solid #aaa;}
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <!--for문-->
+        <div class="test type01">
+            <div class="appendHtml"></div>
+            <h1 class="title red">객체</h1>
+            <table class="type02" width="100%">
+                <colgroup>
+                    <col width="*%" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>input</th>
+                        <th>output</th>
+                        <th>understand</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>    
+                        <!--input-->                
+                        <td>
+                            객체 <span class="red">=</span> <span class="yellow">{</span>
+                            <div class="run">
+                                <span class="green">속성</span><span class="violet">(</span>
+                                <span class="orange italic">프로퍼티</span>
+                                <span class="violet">)</span><span class="red">:</span>
+                                <span class="green">값</span>,
+                            </div>
+                            <div class="run">
+                                <span class="green">속성</span><span class="violet">(</span>
+                                <span class="orange italic">메서드</span>
+                                <span class="violet">)</span><span class="red">:</span>
+                                <span class="green">함수</span>
+                            </div>
+                            <span class="yellow">}</span>
+                        </td>
+                        <!--//input-->
+    
+                        <!--output-->   
+                        <td colspan="2">
+                            객체의 속성이 프로퍼티면 값,<br>
+                            객체의 속성이 메서드면 함수라고 한다.
+                        </td>
+                        <!--output-->   
+                    </tr>
+                    
+                    <tr>    
+                        <!--input-->                
+                        <td>
+                            <p>
+                                <span class="blue">var</span>
+                                이름
+                                <span class="red">=</span>
+                                <span class="lemon">'아톰'</span>;
+                            </p>
+                            <p>
+                                <span class="blue">var</span>
+                                개발
+                                <span class="red">=</span>
+                                <span class="lemon">'깃허브'</span>;
+                            </p>
+                            <p>
+                                <span class="blue">var</span>
+                                공개
+                                <span class="red">=</span>
+                                <span class="lemon">'2014'</span>;
+                            </p>
+                            <p>
+                                <span class="blue">var</span>
+                                색
+                                <span class="red">=</span>
+                                <span class="lemon">'초록'</span>;
+                            </p>
+                            <p>
+                                <span class="blue">var</span>
+                                터미널
+                                <span class="red">=</span>
+                                <span class="lemon">'없음'</span>;
+                            </p>
+                            <br>                            
+                            <div class="consoles">
+                                console.<span class="green">log</span><span class="pink">(</span>
+                                이름
+                                <span class="pink">)</span>
+                            </div>
+                        </td>
+                        <!--//input-->
+    
+                        <!--output-->   
+                        <td></td>
+                        <!--output-->   
+
+                        <!--understand-->                
+                        <td>
+                            
+                        </td>
+                        <!--//understand-->  
+                    </tr>
+                    
+                    <tr>    
+                        <!--input-->                
+                        <td>
+                            <p>
+                                <span class="blue">var</span>
+                                이름
+                                <span class="red">=</span>
+                                <span class="lemon">'아톰'</span>;
+                            </p>
+                            <p>
+                                <span class="blue">var</span>
+                                개발
+                                <span class="red">=</span>
+                                <span class="lemon">'깃허브'</span>;
+                            </p>
+                            <p>
+                                <span class="blue">var</span>
+                                공개
+                                <span class="red">=</span>
+                                <span class="lemon">'2014'</span>;
+                            </p>
+                            <p>
+                                <span class="blue">var</span>
+                                색
+                                <span class="red">=</span>
+                                <span class="lemon">'초록'</span>;
+                            </p>
+                            <p>
+                                <span class="blue">var</span>
+                                터미널
+                                <span class="red">=</span>
+                                <span class="lemon">'없음'</span>;
+                            </p>
+                            <br>                            
+                            <p>
+                                이름
+                                <span class="red">=</span>
+                                <span class="lemon">'비주얼스튜디오'</span>;
+                            </p>
+                            <br>
+                            <div class="consoles">
+                                console.<span class="green">log</span><span class="pink">(</span>
+                                이름
+                                <span class="pink">)</span>
+                            </div>
+                        </td>
+                        <!--//input-->
+    
+                        <!--output-->   
+                        <td></td>
+                        <!--output-->   
+
+                        <!--understand-->                
+                        <td>
+                            
+                        </td>
+                        <!--//understand-->  
+                    </tr>
+                    
+                    <tr>    
+                        <!--input-->                
+                        <td>
+                            <div>
+                                <p>
+                                    <span class="blue">var</span>
+                                    이름
+                                    <span class="red">=</span>
+                                    <span class="lemon">'아톰'</span>;
+                                </p>
+                                <p>
+                                    <span class="blue">var</span>
+                                    개발
+                                    <span class="red">=</span>
+                                    <span class="lemon">'깃허브'</span>;
+                                </p>
+                                <p>
+                                    <span class="blue">var</span>
+                                    공개
+                                    <span class="red">=</span>
+                                    <span class="lemon">'2014'</span>;
+                                </p>
+                                <p>
+                                    <span class="blue">var</span>
+                                    색
+                                    <span class="red">=</span>
+                                    <span class="lemon">'초록'</span>;
+                                </p>
+                                <p>
+                                    <span class="blue">var</span>
+                                    터미널
+                                    <span class="red">=</span>
+                                    <span class="lemon">'없음'</span>;
+                                </p>
+                            </div>
+                            <br>
+                            <div>
+                                <p>
+                                    <span class="blue">var</span>
+                                    이름2
+                                    <span class="red">=</span>
+                                    <span class="lemon">'비주얼 스튜디오'</span>;
+                                </p>
+                                <p>
+                                    <span class="blue">var</span>
+                                    개발2
+                                    <span class="red">=</span>
+                                    <span class="lemon">'마이크로소프트'</span>;
+                                </p>
+                                <p>
+                                    <span class="blue">var</span>
+                                    공개2
+                                    <span class="red">=</span>
+                                    <span class="lemon">'2015'</span>;
+                                </p>
+                                <p>
+                                    <span class="blue">var</span>
+                                    색2
+                                    <span class="red">=</span>
+                                    <span class="lemon">'파랑'</span>;
+                                </p>
+                                <p>
+                                    <span class="blue">var</span>
+                                    터미널2
+                                    <span class="red">=</span>
+                                    <span class="lemon">'있음'</span>;
+                                </p>
+                            </div>
+                            <br>
+                            <div class="consoles">
+                                console.<span class="green">log</span><span class="pink">(</span>
+                                이름
+                                <span class="pink">)</span>
+                                <br>
+                                console.<span class="green">log</span><span class="pink">(</span>
+                                이름2
+                                <span class="pink">)</span>
+                            </div>
+                        </td>
+                        <!--//input-->
+    
+                        <!--output-->   
+                        <td></td>
+                        <!--output-->   
+
+                        <!--understand-->                
+                        <td>
+                            
+                        </td>
+                        <!--//understand-->  
+                    </tr>
+
+                    <tr>    
+                        <!--input-->                
+                        <td>
+                            <div>
+                                <p>
+                                    <span class="blue">var</span>
+                                    아톰
+                                    <span class="red">=</span>
+                                    <span class="pink"">{</span>
+                                </p>
+                                <div class="run">
+                                    <p>
+                                        이름:
+                                        <span class="lemon">'아톰</span>,
+                                    </p>
+                                    <p>
+                                        개발:
+                                        <span class="lemon">'깃허브'</span>,
+                                    </p>
+                                    <p>
+                                        공개:
+                                        <span class="lemon">'2014'</span>,
+                                    </p>
+                                    <p>
+                                        색:
+                                        <span class="lemon">'초록'</span>,
+                                    </p>
+                                    <p>
+                                        터미널:
+                                        <span class="lemon">'없음'</span>
+                                    </p>
+                                </div>   
+                                <span class="pink"">}</span>                                
+                            </div>
+                            <br>
+                            <div>
+                                <p>
+                                    <span class="blue">var</span>
+                                    비주얼_스튜디오
+                                    <span class="red">=</span>
+                                    <span class="pink"">{</span>
+                                </p>
+                                <div class="run">
+                                    <p>
+                                        이름:
+                                        <span class="lemon">'비주얼 스튜디오'</span>,
+                                    </p>
+                                    <p>
+                                        개발:
+                                        <span class="lemon">'마이크로소프트'</span>,
+                                    </p>
+                                    <p>
+                                        공개:
+                                        <span class="lemon">'2015'</span>,
+                                    </p>
+                                    <p>
+                                        색:
+                                        <span class="lemon">'파랑'</span>,
+                                    </p>
+                                    <p>
+                                        터미널:
+                                        <span class="lemon">'있음'</span>
+                                    </p>
+                                </div>   
+                                <span class="pink"">}</span>    
+                            </div>                           
+                            <br>
+                            <div class="consoles">
+                                <p>
+                                    console.<span class="green">log</span><span class="pink">(</span>
+                                    아톰
+                                    <span class="pink">)</span>
+                                </p>
+                                <p>
+                                    console.<span class="green">log</span><span class="pink">(</span>
+                                    비주얼_스튜디오
+                                    <span class="pink">)</span>
+                                </p>
+                                <p>
+                                    console.<span class="green">log</span><span class="pink">(</span>
+                                    아톰.이름
+                                    <span class="pink">)</span>
+                                </p>
+                                <p>
+                                    console.<span class="green">log</span><span class="pink">(</span>
+                                    비주얼_스튜디오.이름
+                                    <span class="pink">)</span>
+                                </p>
+                            </div>
+                        </td>
+                        <!--//input-->
+    
+                        <!--output-->   
+                        <td></td>
+                        <!--output-->   
+
+                        <!--understand-->                
+                        <td>
+                            
+                        </td>
+                        <!--//understand-->  
+                    </tr>
+
+                    <tr>    
+                        <!--input-->                
+                        <td>
+                            <div>
+                                <p>
+                                    <span class="blue">var</span>
+                                    아톰
+                                    <span class="red">=</span>
+                                    <span class="pink"">{</span>
+                                </p>
+                                <div class="run">
+                                    <p>
+                                        이름:
+                                        <span class="lemon">'아톰</span>,
+                                    </p>
+                                    <p>
+                                        <span class="green">함수</span>:
+                                        <span class="blue italic">function</span>
+                                        <span class="green">편집기</span>
+                                        <span class="blue">()</span> 
+                                        <span class="blue">{</span> 
+                                        <div class="run">
+                                            console.<span class="green">log</span><span class="yellow">(</span>
+                                            <span class="lemon">'바둑이방울'</span>
+                                            <span class="yellow">)</span>
+                                        </div>
+                                        <span class="blue">}</span> 
+                                    </p>
+                                </div>   
+                                <span class="pink"">}</span>                                
+                            </div>
+                            <br>
+                            <div>
+                                <p>
+                                    <span class="blue">var</span>
+                                    비주얼_스튜디오
+                                    <span class="red">=</span>
+                                    <span class="pink"">{</span>
+                                </p>
+                                <div class="run">
+                                    <p>
+                                        이름:
+                                        <span class="lemon">'비주얼 스튜디오'</span>,
+                                    </p>
+                                    <p>
+                                        <span class="green">함수</span>:
+                                        <span class="blue italic">function</span>
+                                        <span class="green">편집기</span>
+                                        <span class="blue">()</span> 
+                                        <span class="blue">{</span> 
+                                        <div class="run">
+                                            console.<span class="green">log</span><span class="yellow">(</span>
+                                            <span class="lemon">'잘도울린다'</span>
+                                            <span class="yellow">)</span>
+                                        </div>
+                                        <span class="blue">}</span> 
+                                    </p>
+                                </div>   
+                                <span class="pink"">}</span>    
+                            </div>                           
+                            <br>                            
+                            <div class="consoles">
+                                <p>
+                                    console.<span class="green">log</span><span class="pink">(</span>
+                                    아톰
+                                    <span class="pink">)</span>
+                                </p>
+                                <p>
+                                    console.<span class="green">log</span><span class="pink">(</span>
+                                    비주얼_스튜디오
+                                    <span class="pink">)</span>
+                                </p>
+                                <p>
+                                    console.<span class="green">log</span><span class="pink">(</span>
+                                    아톰.함수
+                                    <span class="pink">)</span>
+                                </p>
+                                <p>
+                                    console.<span class="green">log</span><span class="pink">(</span>
+                                    아톰[ <span class="lemon">'함수'</span> ]
+                                    <span class="pink">)</span>
+                                </p>
+                                <p>
+                                    console.<span class="green">log</span><span class="pink">(</span>
+                                    아톰.<span class="green">'함수'</span><span class="blue">( )</span>
+                                    <span class="pink">)</span>
+                                </p>
+                            </div>
+                        </td>
+                        <!--//input-->
+    
+                        <!--output-->   
+                        <td></td>
+                        <!--output-->   
+
+                        <!--understand-->                
+                        <td>
+                            
+                        </td>
+                        <!--//understand-->  
+                    </tr>
+
+                    <tr>    
+                        <!--input-->                
+                        <td>
+                            <div>
+                                <p>
+                                    <span class="blue">var</span>
+                                    아톰
+                                    <span class="red">=</span>
+                                    <span class="pink"">{</span>
+                                </p>
+                                <div class="run">
+                                    <p>
+                                        이름:
+                                        <span class="lemon">'아톰</span>,
+                                    </p>
+                                    <p>
+                                        <span class="green">함수</span>:
+                                        <span class="blue italic">function</span>
+                                        <span class="green">편집기</span>
+                                        <span class="blue">()</span> 
+                                        <span class="blue">{</span> 
+                                        <div class="run">
+                                            console.<span class="green">log</span><span class="yellow">(</span>
+                                            <span class="lemon">'바둑이방울'</span>
+                                            <span class="yellow">)</span>
+                                        </div>
+                                        <span class="blue">}</span> 
+                                    </p>
+                                </div>   
+                                <span class="pink"">}</span>                                
+                            </div>
+                            <br>     
+                            <div>
+                                <span class="blue">var</span>
+                                값
+                                <span class="red">=</span>
+                                <span class="lemon">'이름'</span> ;
+                            </div>                   
+                            <div class="consoles">
+                                <p>
+                                    console.<span class="green">log</span><span class="pink">(</span>
+                                    값
+                                    <span class="pink">)</span>
+                                </p>
+                                <p>
+                                    console.<span class="green">log</span><span class="pink">(</span>
+                                    아톰.값
+                                    <span class="pink">)</span>
+                                </p>
+                                <p>
+                                    console.<span class="green">log</span><span class="pink">(</span>
+                                    아톰[값]
+                                    <span class="pink">)</span>
+                                </p>
+                            </div>
+                        </td>
+                        <!--//input-->
+    
+                        <!--output-->   
+                        <td></td>
+                        <!--output-->   
+
+                        <!--understand-->                
+                        <td>
+                            
+                        </td>
+                        <!--//understand-->  
+                    </tr>
+                </tbody>
+            </table>
+        
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                // objEg_01();
+                // objEg_02();
+                // objEg_03();
+                objEg_04();
+                objEg_05();
+
+                console.log('안녕하세요'[3])
+                // .을 붙이면 객체로 바꿈
+                console.log('안녕하세요'.length)
+
+                
+            });
+            function objEg_01() {
+                var 이름 = '아톰';
+                var 개발 = '깃허브';
+                var 공개 = '2014';
+                var 색 = '초록';
+                var 터미널 = '없음';
+                
+                console.log(이름)
+            }
+            function objEg_02() {
+                var 이름 = '아톰';
+                var 개발 = '깃허브';
+                var 공개 = '2014';
+                var 색 = '초록';
+                var 터미널 = '없음';
+                
+                var 이름2 = '비주얼 스튜디오';
+                var 개발2 = '마이크로소프트';
+                var 공개2 = '2015';
+                var 색2 = '파랑';
+                var 터미널2 = '있음';
+
+                console.log(이름)
+                console.log(이름2)
+            }
+            function objEg_03() {
+                var 아톰 = {
+                    이름: '아톰',
+                    개발: '깃허브',
+                    공개: '2014',
+                    색: '초록',
+                    터미널: '없음'
+                }
+
+                var 비주얼_스튜디오 = {
+                    이름: '비주얼 스튜디오',
+                    개발: '마이크로소프트',
+                    공개: '2015',
+                    색: '파랑',
+                    터미널: '있음'
+                }
+                              
+                console.log(아톰)
+                console.log(비주얼_스튜디오)
+                console.log(비주얼_스튜디오.이름)
+                console.log(비주얼_스튜디오.이름)
+            }
+            function objEg_04() {
+                
+                var 아톰 = {
+                    이름: '아톰',
+                    함수: function 편집기() {
+                        console.log('바둑이방울')
+                    }
+                }
+
+                var 비주얼_스튜디오 = {
+                    이름: '비주얼 스튜디오',
+                    함수: function 편집기() {
+                        console.log('잘도울린다')
+                    }
+                }
+                              
+                console.log(아톰)
+                console.log(비주얼_스튜디오)
+                console.log(비주얼_스튜디오.함수)
+                console.log(비주얼_스튜디오['함수'])
+                console.log(비주얼_스튜디오.함수())
+
+                //[대괄호] 안에는 변수 가능, .(점) 뒤는 불가!
+                var 값 = '이름';
+                console.log('값', 값)
+                console.log('비주얼_스튜디오.값', 비주얼_스튜디오.값)
+                console.log('비주얼_스튜디오.값', 비주얼_스튜디오[값])
+            }
+            
+            function objEg_05() {
+                var 문자객체 = {
+                    length: 5,
+                    repeat: function repeat(num) {
+                        // 실행함수
+                    }
+                }
+            }
+        </script>
+        <!--//for문-->
+
+        
+        <!---->
+        <div class="test type02">
+            <h1 class="title">
+                <strong class="red"></strong>
+            </h1>
+            <table class="type02" width="100%">
+                <colgroup></colgroup>
+                <thead>
+                    <tr>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>        
+        <!--//-->
+
+    </div>
+
+    
+    
+
+
+
+
+
+    <!-- table type01
+        <table class="type01" width="100%">
+        <colgroup>
+            <col width="10%" />
+            <col width="*" />
+        </colgroup>
+        <tbody>
+            <tr>
+                <th>input</th>
+                <td>
+                    <p class="access">
+                        <span class="red">for</span>
+                        <span class="pink">(</span>
+                        <span>처음</span><strong class="blue italic">(1)</strong> ;&nbsp; 
+                        <span>조건</span><strong class="blue italic">(2)</strong> ;&nbsp; 
+                        <span>끝</span><strong class="blue italic">(4)</strong> ; 
+                        <span class="pink">)</span> <span class="yellow">{</span>
+                    </p>
+                    <p class="run">
+                        실행<strong class="green">(3)</strong>
+                    </p>
+                    <span class="yellow">}</span>
+                </td>
+                <td>
+                    <p class="access">
+                        <span class="red">for</span>
+                        <span class="pink">(</span>
+                        <span class="blue italic">var</span>&nbsp; 
+                        star<span class="red">=</span> <span class="violet">1</span>; 
+                        star <span class="red"><=</span> <span class="violet">5</span>; 
+                        star<span class="red">+=</span> <span class="violet">1</span>
+                        <span class="pink">)</span> <span class="yellow">{</span>
+                    </p>
+                    <p class="run">
+                        console.<span class="green">log</span> <span class="blue">(</span> <span class="lemon">"*"</span> <span class="blue">)</span>
+                    </p>
+                    <span class="yellow">}</span>
+                </td>
+            </tr>
+            <tr>
+                <th>output</th>
+            </tr>
+        </tbody>
+    </table> 
+    -->
+</body>
+</html>

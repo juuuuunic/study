@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OBJECT</title>
+    <title>ARRAY</title>
     <link type="text/css" rel="stylesheet" href="/palyground/css/reset.css">
     <script type="text/javascript" src="/palyground/js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript">
@@ -569,137 +569,80 @@
             </table>
         
         </div>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                // objEg_01();
-                // objEg_02();
-                // objEg_03();
-                objEg_04();
-                objEg_05();
-
-                console.log('안녕하세요'[3])
-                // .을 붙이면 객체로 바꿈
-                console.log('안녕하세요'.length)
-
-                
-            });
-            function objEg_01() {
-                var 이름 = '아톰';
-                var 개발 = '깃허브';
-                var 공개 = '2014';
-                var 색 = '초록';
-                var 터미널 = '없음';
-                
-                console.log(이름)
-            }
-            function objEg_02() {
-                var 이름 = '아톰';
-                var 개발 = '깃허브';
-                var 공개 = '2014';
-                var 색 = '초록';
-                var 터미널 = '없음';
-                
-                var 이름2 = '비주얼 스튜디오';
-                var 개발2 = '마이크로소프트';
-                var 공개2 = '2015';
-                var 색2 = '파랑';
-                var 터미널2 = '있음';
-
-                console.log(이름)
-                console.log(이름2)
-            }
-            function objEg_03() {
-                var 아톰 = {
-                    이름: '아톰',
-                    개발: '깃허브',
-                    공개: 2014,
-                    색: '초록',
-                    터미널: '없음'
-                }
-
-                var 비주얼_스튜디오 = {
-                    이름: '비주얼 스튜디오',
-                    개발: '마이크로소프트',
-                    공개: 2015,
-                    색: '파랑',
-                    터미널: '있음'
-                }
-                              
-                console.log(아톰)
-                console.log(비주얼_스튜디오)
-                console.log(비주얼_스튜디오.이름)
-                console.log(비주얼_스튜디오.이름)
-            }
-            function objEg_04() {
-                
-                var 아톰 = {
-                    이름: '아톰',
-                    함수: function 편집기() {
-                        console.log('바둑이방울')
-                    }
-                }
-
-                var 비주얼_스튜디오 = {
-                    이름: '비주얼 스튜디오',
-                    함수: function 편집기() {
-                        console.log('잘도울린다')
-                    }
-                }
-                              
-                console.log(아톰)
-                console.log(비주얼_스튜디오)
-                console.log(비주얼_스튜디오.함수)
-                console.log(비주얼_스튜디오['함수'])
-                console.log(비주얼_스튜디오.함수())
-
-                //[대괄호] 안에는 변수 가능, .(점) 뒤는 불가!
-                var 값 = '이름';
-                console.log('값', 값)
-                console.log('비주얼_스튜디오.값', 비주얼_스튜디오.값)
-                console.log('비주얼_스튜디오.값', 비주얼_스튜디오[값])
-            }
-            
-            function objEg_05() {
-                var 문자객체 = {
-                    length: 5,
-                    repeat: function repeat(num) {
-                        // 실행함수
-                    }
-                }
-            }
-        </script>
-        <!--//for문-->
-
-        
-        <!---->
-        <div class="test type02">
-            <h1 class="title">
-                <strong class="red"></strong>
-            </h1>
-            <table class="type02" width="100%">
-                <colgroup></colgroup>
-                <thead>
-                    <tr>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th></th>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>        
-        <!--//-->
-
     </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            arrEg_01()
+            arrEg_02()
 
-    
-    
+            
+        });
 
+        function arrEg_01() {
+            var 배열 = [
+                '사과',
+                '오렌지',
+                '포도',
+                '딸기'
+            ]
 
+            console.log('배열[0]:', 배열[0])
+            console.log('배열[1]:', 배열[1])
+            console.log('배열[2]:', 배열[2])
+            console.log('배열[3]:', 배열[3])
+            console.log('배열[4]:', 배열[4])
+            console.log('배열[-1]:', 배열[-1])
+            console.log('배열.length:', 배열.length)
+            console.log('\'안녕하세요\'[0]:','안녕하세요'[0],', \'안녕하세요\'.length:' ,'안녕하세요'.length)
 
+            var understand = '값을 그룹화하고 싶지만 속서의 이름을 따로 주고싶지 않을 때 배열을 사용한다.<br>배열 순서에 음수값을 넣었을 때 마지막 값을 돌려주는 언어도 있다.'
+        }
+
+        function arrEg_02() {
+            var 배열 = [
+                '사과',
+                '오렌지',
+                '포도',
+                '딸기'
+            ]
+
+            var 배열같은객체 = {
+                0: '코끼리',
+                1: '고양이',
+                2: '강아지',
+                3: '얼룩말'
+            }
+            console.log(배열)
+            console.log(배열같은객체)
+            console.log('배열같은객체[0]:', 배열같은객체[0])
+            console.log('배열같은객체[1]:', 배열같은객체[1])
+            console.log('배열같은객체[2]:', 배열같은객체[2])
+            console.log('배열같은객체[3]:', 배열같은객체[3])
+            console.log('배열같은객체[4]:', 배열같은객체[4])
+            console.log('배열같은객체.length:', 배열같은객체.length)
+            console.log('Array.isArray(배열):', Array.isArray(배열))
+            console.log('Array.isArray(배열같은객체)', Array.isArray(배열같은객체))
+
+            var understand = '\'배열같은객체\'는 \'배열\'과 모양은 다르나 배열과 같이 할 수 있다.<br>\'배열\'은 브라우저에서 제공하는 배열, \'배열같은객체\'는 배열을 흉내내서 만든 객체들의 모임'
+            var understand = '배열을 담당하는 객체는 array, isArray() 함수를 이용하여 이 둘을 구분할 수 있다.(true/ false)'
+        }
+
+        function arrEg_03() {
+            var 안녕 = '안녕하세요'
+
+            console.log('안녕[3]:', 안녕[3])
+            console.log('안녕.length:', 안녕.length)
+            console.log('Array.isArray(안녕):', Array.isArray(안녕))
+
+            var understand = '배열처럼 썼으나 false'
+        }
+
+        function arrEg_04() {
+            console.log(Array)
+            var understand = '위에서 정한 적은 없지만 정의가 나오는 것은 브라우저에서 이미 제공하고 있는 객체(또는 함수. 이하 객체)이기 때문이다. 이러한 객체를 찾아서 쓴다. e.g)Math: 수학객체를 이미 만들어 놓은 것.<br>(객체는 함수를 포함하는 것)'
+        }
+
+    </script>
 
 
     <!-- table type01

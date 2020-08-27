@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORD CHAIN</title>
+    <link type="text/css" rel="stylesheet" href="/css/word_chain.css">
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/js/word_chain.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            
+        });
+
+        // function a() {
+        //     var word = '끝말잇기 시작?!';
+        //     while(true) {
+        //         var nWord = prompt(word);
+        //         var answer = prompt(nWord);
+        //         if(nWord[nWord.length -1] == answer[0]) {
+        //             nWord = answer;
+        //             prompt(nWord);
+        //         } else {
+        //             alert('끝!')
+        //         }
+        //         break;
+        //     }
+        // };
+
+        
+        // function wordchain(obj) {
+        //     var nWord = obj.value
+        //     document.getElementsByClassName('word')[0].innerText = nWord;
+        //     if(nWord[nWord.length -1] == answer[0]) {
+
+        //    }            
+            // var answer = nWord;
+            // if(nWord[nWord.length -1] == answer[0]) {
+            //     nWord = answer;
+            //     $(".word").text(nWord);
+            //     $(".nWord").val('')
+            // } else {
+            //     alert('끝!')
+            //     $(".word").text('한 번 더?');
+            //     $(".nWord").stop().hide();
+            //     $(".reStart").stop().show();
+            //     i = 2;
+            // }
+            // while(true) {
+            //     $(".word").text(nWord);
+            //     var answer = nWord;
+            //     if(nWord[nWord.length -1] == answer[0]) {
+            //         nWord = answer;
+            //         $(".word").text(nWord);
+            //         $(".nWord").val('')
+            //     } else {
+            //         alert('끝!')
+            //         $(".word").text('한 번 더?');
+            //         $(".nWord").stop().hide();
+            //         $(".reStart").stop().show();
+            //         false;
+            //     }
+            //     break;
+            // }
+            // $(".nWord").on('change', function() {
+            //     $(".word").text(nWord)
+            //     var answer = nWord;
+            //     while(bool) {
+            //         if(nWord[nWord.length -1] == answer[0]) {
+            //             nWord = answer;
+            //             $(".word").text(nWord)
+            //             $(".nWord").val('')
+            //         } else { 
+            //             alert('끝!')
+            //             break;
+            //         }
+            //     }
+            // });
+       // }
+
+        // function setCount() {
+        //     var time = $(".set-time > li").length-1;
+        //     var timer = setInterval(function(){
+        //         $(".set-time > li").eq(time).fadeOut();
+        //         time--;
+        //         if(time == -2) {
+        //             clearInterval(timer);
+        //             alert("시간초과로 끝말잇기가 끝났읍니당~!");
+        //             $(".word").text('한 번 더?')
+        //             $(".nWord").stop().hide();
+        //             $(".reStart").stop().show();
+        //         }
+        //     },1000);  
+        // }
+
+        // function reStart() {
+        //     $(".word").text('시작 단어를\n제시해주세요.');
+        //     $(".nWord").stop().show();
+        //     $(".reStart").stop().hide();
+        //     bool = true;
+        //     wordchain();
+        // }
+
+        // function keyUp(obj) {
+        //     if(window.event.keyCode == 13 && event.target.value !== '') {
+        //         wordchain(obj);
+        //     }
+        // }
+    </script>
+
+    <!--IE9만 적용 -->
+	<!--[if IE 9]>
+		<script src="/palyground/js/ie-9.js"></script>
+    	<link rel="stylesheet" type="text/css" href="/palyground/css/ie-9.css" />
+    <![endif]-->
+    
+</head>
+<body>
+    <header>
+        <h1 class="title"><a href="./word_chain.html">끝말잇기</a></h1>
+    </header>
+    <div class="content">
+        <div class="set-up">
+            <div class="how-to">
+                <h3>How to Play</h3>
+                <ol>
+                    <li>1. 참가 인원을 설정해주세요.</li>
+                    <li>2. 닉네임을 설정해주세요.</li>
+                    <li>3. 게임 순서는 매 턴마다 <span>랜덤</span>으로 정해집니다.</li>
+                    <li>4. 각자 3개의 목숨을 가지고 시작됩니다.</li>
+                    <li>5. 끝말잇기에 실패할 때마다 목숨이 하나씩 사라집니다.</li>
+                    <li>6. 성공하면 목숨 하나씩 추가!</li>
+                    <li>7. 최대 목숨은 <span>다섯개</span>랍니다.</li>
+                    <li>8. 한 사람의 목숨이 끝날 때 끝말잇기도 끝이납니다.</li>
+                    <li>9. 화내지 말기</li>
+                </ol>
+            </div>
+            <input type="text" class="people" placeholder="How many People" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+            <input type="button" class="start" value="START">
+        </div>
+        <div class="set-play">
+            <h1 class="word">시작 단어를 <br>제시해주세요.</h1>
+            <form name="word-chain">
+                <div class="play_data">
+                    <!-- <ul class="play_time clearfix">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul> -->
+        
+                    <!-- <ul class="play_life clearfix">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul> -->
+                </div>
+                <input type="text" class="nWord" placeholder="Input your answer" onkeyup="this.value=this.value.replace(/[^ㄱ-힣]/gi,'');">
+                <input type="button" class="reStart" value="ONE MORE">
+                <input type="submit" class="submit" value="ENTER">
+            </form>
+    </div>
+</body>
+</html>

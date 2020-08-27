@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+    <link type="text/css" rel="stylesheet" href="/palyground/css/reset.css">
+    <script type="text/javascript" src="/palyground/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+        });
+    </script>
+
+    <!--IE9만 적용 -->
+	<!--[if IE 9]>
+		<script src="/palyground/js/ie-9.js"></script>
+    	<link rel="stylesheet" type="text/css" href="/palyground/css/ie-9.css" />
+    <![endif]-->
+    
+    <style>
+        * {padding: 0; margin: 0;}
+        body {color: #272822; font-size: 12px !important; line-height: 1.5; padding: 40px 0;}
+        .wrap {width: 95%; max-width: 1200px; margin-left: auto; margin-right: auto;}
+        .title {font-size: 20px; font-weight: bold;}
+        .code {display: inline-block; color: #fff; background-color: #272822; padding: 10px 20px 10px 10px; box-sizing: border-box;}
+        .red {color: #f92672;}
+        .violet {color: #ae81ff;}
+        .pink {color: #cf65a2;}
+        .blue {color: #66d9ef;}
+        .green {color: #8ae229;}
+        .yellow {color: #ffd712;}
+        .lemon {color: #e6db74;}
+        .italic {font-style: italic;}
+        .underline {text-decoration: underline;}
+        .run {padding-left: 20px;}
+        table th, table td {vertical-align: middle; padding: 10px 0px 10px 20px;}
+        table td:first-child {color: #fff; background-color: #272822; border-bottom: 1px solid #fff;}
+        table tr+tr td {border-top: 1px solid #aaa;}
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <!--for문-->
+        <div class="test type01">
+            <div class="appendHtml"></div>
+            <h1 class="title red">객체</h1>
+            <table class="type02" width="100%">
+                <colgroup>
+                    <col width="30%" />
+                    <col width="30%" />
+                    <col width="40%" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>input</th>
+                        <th>output</th>
+                        <th>understand</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>    
+                        <!--input-->                
+                        <td>
+                            프로그래밍? 컴퓨터에 명령
+                            자바스크립트? 명령할 때 쓰이는 언어(JAVA랑 다른 것)/ 웹사이트나 웹앱(페이스북,유투브)을 만들 때 쓰임/ 현재는 웹에만 국한된 언어가 아니라 모바일엡도 만드는 언어가 되었음
+                            값? 숫자, 문자, 참/거짓(불린 또는 불리언이라 한다.) 문자는 따옴표(큰따옴표, 작은따옴표 상관X)로 감싼다.
+                            불린? true/ false
+                            레플? 입력값은 브라우저가 분석(평가)하여 결과를 돌려주는 것(읽기 > 분석(평가) > 출력)
+                            따옴표를 붙이면 브라우저는 문자로 인식한다. true: 불린/ "true": 문자
+                            
+                        </td>
+                        <!--//input-->
+    
+                        <!--output-->   
+                        <td>
+                           
+                        </td>
+                        <!--output-->   
+
+                        <!-- understand -->
+                        <td>
+
+                        </td>
+                        <!-- //understand -->
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            연산자?
+                            계산을 하는 기호
+                            곱하기: *
+                            나누기: /
+                            나머지: %
+                            etc: 부등호/ 같다
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            비교연산자?
+                            NaN === NaN(유일한 예외/ Not a Number)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            변수?
+                            NaN === NaN(유일한 예외/ Not a Number)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            javascript_03()
+
+            
+        });
+
+        function javascript_01() {
+            console.log(1)
+            console.log(2)
+            console.log(3)
+            console.log(안녕)
+            console.log("안녕")
+        }
+
+        function javascript_02() {
+            console.log(1*2)
+            console.log(2)
+            console.log(3)
+            console.log(안녕)
+            console.log("안녕")
+        }
+        function javascript_03() {
+            console.log("1+2:", 1+2);
+            console.log("10-3:",10-3);
+            console.log("1234+1234:",1234*1234);
+            console.log("4321/1234:",4321/1234);
+            console.log("5>3:",5>3);
+            console.log("5<3:",5<3);
+            console.log("\"문자\"<5:","문자"<5);
+            console.log("5>=5:",5>=5);
+            console.log("5==5:",5==5);
+            console.log("\"문자\"==\"문자\":","문자"=="문자");
+            console.log("\"false\"==\"false\":","false"=="false");
+        }
+        function javascript_04() {
+            console.log()
+        }
+        function javascript_05() {}
+        function javascript_06() {}
+        function javascript_07() {}
+    </script>
+</body>
+</html>

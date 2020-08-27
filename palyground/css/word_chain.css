@@ -1,0 +1,30 @@
+@import 'common.css';
+
+header { width: 100%; height: 56px; border-bottom: 1px solid #e8e8e8; box-sizing: border-box; }
+/* header .title { line-height: 56px; text-align: center; } */
+header .title > a { display: table; font-size: 20px; font-weight: bold; color: #595959; line-height: 55px; margin: 0 auto; }
+.content { position: relative; width: 360px; margin: 30px auto; box-sizing: border-box; }
+
+.content .set-up {}
+.content .set-up .how-to h3 { font-size: 22px; letter-spacing: 3px; }
+.content .set-up .how-to ol { margin-top: 30px; }
+.content .set-up .how-to ol > li { font-size: 16px; margin-top: 10px; }
+.content .set-up .how-to ol > li span { font-size: 20px; font-weight: bold; color: lightseagreen; margin-left: 4px; }
+
+.content .set-play {display: none;}
+.content .set-play .word { font-size: 22px; line-height: 1.4; letter-spacing: -1px; }
+.content .set-play .play_data { margin-top: 30px; }
+.content .set-play .play_data > ul > li { float: left; margin-right: 6px; }
+.content .set-play .play_time > li { font-size: 12px; color: #fff; background-color: #018aff; -webkit-border-radius: 16px; border-radius: 16px; padding: 2px 6px 3px 5px; box-sizing: border-box; }
+.content .set-play .play_life > li { position: relative; width: 12px; height: 12px; background-color: #ea2027; -webkit-transform: rotate(45deg); transform: rotate(45deg); margin-left: 5px; }
+.content .set-play .play_life > li::before,
+.content .set-play .play_life > li::after { content: ""; position: absolute; width: 12px; height: 12px; -webkit-border-radius: 12px; border-radius: 12px; background: #ea2027; }
+.content .set-play .play_life > li::before { left: -50%; }
+.content .set-play .play_life > li::after { top: -50%; }
+
+.content input { position: relative; width: 100%; font-size: 15px; line-height: 46px; margin-top: 15px; }
+.content input:not([type=text]) { position: absolute; left: 0; bottom: -66px; cursor: pointer; }
+.content input[type=text] { border: 1px solid #eee;  padding: 0 11px; box-sizing: border-box; }
+.content input.submit { background-color: #f8de7e; }
+.content input.start { color: #fff; background-color: lightseagreen; }
+.content input.reStart { display: none; color: #fff; background-color: #018aff; }

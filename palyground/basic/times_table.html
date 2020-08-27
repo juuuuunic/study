@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIMES TABLE</title>
+    <link type="text/css" rel="stylesheet" href="/palyground/css/reset.css">
+    <script type="text/javascript" src="/palyground/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+        });
+    </script>
+
+    <!--IE9만 적용 -->
+	<!--[if IE 9]>
+		<script src="/palyground/js/ie-9.js"></script>
+    	<link rel="stylesheet" type="text/css" href="/palyground/css/ie-9.css" />
+    <![endif]-->
+    
+    <style>
+        * {padding: 0; margin: 0;}
+        body {color: #272822; font-size: 12px !important; line-height: 1.5; padding: 40px 0;}
+        .wrap {position: relative; width: 95%; max-width: 1200px; margin-left: auto; margin-right: auto;}
+        .wrap > div+div {margin-top: 50px;}
+        .title {font-size: 20px; font-weight: bold; margin-bottom: 20px;}
+        .code {display: inline-block; color: #fff; background-color: #272822; padding: 10px 20px 10px 10px; box-sizing: border-box;}
+        .red {color: #f92672;}
+        .violet {color: #ae81ff;}
+        .pink {color: #cf65a2;}
+        .blue {color: #66d9ef;}
+        .green {color: #8ae229;}
+        .yellow {color: #ffd712;}
+        .lemon {color: #e6db74;}
+        .orange {color: #fd971f;}
+        .grey {color: #88846f;}
+        .italic {font-style: italic;}
+        .underline {text-decoration: underline;}
+        .run {padding-left: 20px;}
+        table th, table td {vertical-align: middle; padding: 10px 0px 10px 20px;}
+        table td:first-child {color: #fff; background-color: #272822; border-bottom: 1px solid #fff;}
+        table tr+tr td {border-top: 1px solid #aaa;}
+        table tr td+td {border-left: 1px solid #aaa;}
+
+        .flow {position: relative; display: inline-block; width: 200px; height: 100%;}
+        .flow > li {position: relative; width: 100%; height: 50px;}
+        .flow > li+li {margin-top: 20px;}
+        .flow > li:not(.diamond):not(.return) {line-height: 46px/** border 값 재외 **/; text-align: center; border: 2px solid lightblue; box-sizing: border-box;}
+        .flow > li.return {position: absolute;}
+        .flow > li.re_true {top: 40px; left: -50px;}
+        .flow > li.re_true::before {content: ''; position: absolute; top: -35px; left: 5px; width: 25px; height: 25px; border-top: 2px solid green; border-left: 2px solid green;}
+        .flow > li.re_true::after {content: ''; position: absolute; top: 25px; left: 5px; width: 25px; height: 70px; border-bottom: 2px solid green; border-left: 2px solid green;}
+        .flow > li.re_false {bottom: 30px; right: -230px;}
+        .flow > li.re_false::before {content: ''; position: absolute; top: -25px; left: -10px; width: 25px; height: 15px; border-top: 2px solid green; border-right: 2px solid green;}
+        .flow > li.re_false::after {content: ''; position: absolute; top: 25px; left: -10px; width: 25px; height: 20px; border-bottom: 2px solid green; border-right: 2px solid green;}
+        .flow > li.diamond {left: 10px;}
+        .diamond > div {display: inline-block; width: 100px; height: 50px; border-top: 2px solid pink;}
+        .diamond > div::after {content: ''; position: absolute; width: 100%; height: 100%; border-top: 2px solid pink; bottom: -22px;}
+        .diamond_top {transform: rotate(-15deg);}
+        .diamond_top:after {transform: rotate(30deg); left: -18px !important;}
+        .diamond_bott {transform: rotate(15deg); margin-left: -20px;}
+        .diamond_bott:after {transform: rotate(-30deg); left: 18px !important;}
+        .diamond > .txt {position: absolute; top: 4px; left: 70px;}
+
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="flow-box">
+            <h1 class="title red">flow</h1>
+            <ul class="flow">
+                <li>컴퓨터가 랜덤으로 문제 제공</li>
+                <li>답 입력</li>
+                <li class="diamond">
+                    <div class="diamond_top"> </div>
+                    <div class="diamond_bott"></div>
+                    <p class="txt">정답인가?</p>
+                </li>
+                <li class="return re_true">예</li>
+                <li class="return re_false">아니오</li>
+            </ul>
+        </div>
+        <!-- times table -->
+        <div class="test type01">
+            <div class="appendHtml"></div>
+            <h1 class="title red">구구단</h1>
+            <!-- table -->
+            <table class="type02" width="100%">
+                <colgroup>
+                    <col width="40%" />
+                    <col width="30%" />
+                    <col width="30%" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>input</th>
+                        <th>output</th>
+                        <th>understand</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!--input-->
+                        <td>
+                            <p>
+                                <span class="blue">function</span>
+                                <span class="green">times_tableEg_01</span>
+                                <span class="yellow">()</span>
+                                <span class="yellow">{</span>
+                                <span class="yellow">}</span>
+                            </p>
+                        </td>
+                        <!--//input-->
+
+                        <!--output-->
+                        <td></td>
+                        <!--//output-->
+
+                        <!--understand-->
+                        <td></td>
+                        <!--//understand-->
+                    </tr>
+                    <tr>    
+                        <!--input-->                
+                        <td>
+                            <p>
+                                <span class="blue">function</span>
+                                <span class="green">times_table</span>
+                                <span class="yellow">()</span>
+                                <span class="yellow">{</span>
+                            </p>
+                            <div class="run">
+                                <p>
+                                    <span class="red">while</span><span class="pink">(</span>
+                                    <span class="violet">true</span>
+                                    <span class="pink">)</span>
+                                    <span class="pink"> {</span>
+                                    <span class="grey"> //문제 무한 반복</span>
+                                </p>
+                                <div class="run">
+                                    <p>
+                                        <span class="blue italic">var</span>
+                                        <span>숫자1</span>
+                                        <span class="red">=</span>
+                                        <span class="green">Math</span>
+                                        <span>.</span>
+                                        <span class="green">floor</span>
+                                        <span class="blue">(</span>
+                                        <span class="green">Math</span>
+                                        <span>.</span>
+                                        <span class="green">random</span><span class="yellow">()</span>
+                                        <span class="red">*</span>
+                                        <span class="violet">9</span>
+                                        <span class="blue">)</span>
+                                        <span class="red">+</span>
+                                        <span class="violet">1</span>
+                                        <span>;</span>
+                                    </p>
+                                    <p>
+                                        <span class="blue italic">var</span>
+                                        <span>숫자2</span>
+                                        <span class="red">=</span>
+                                        <span class="green">Math</span>
+                                        <span>.</span>
+                                        <span class="green">floor</span>
+                                        <span class="blue">(</span>
+                                        <span class="green">Math</span>
+                                        <span>.</span>
+                                        <span class="green">random</span><span class="yellow">()</span>
+                                        <span class="red">*</span>
+                                        <span class="violet">9</span>
+                                        <span class="blue">)</span>
+                                        <span class="red">+</span>
+                                        <span class="violet">1</span>
+                                        <span>;</span>
+                                    </p>
+                                    <p>
+                                        <span class="blue italic">var</span>
+                                        <span>결과</span>
+                                        <span class="red">=</span>
+                                        <span>숫자1</span>
+                                        <span class="red">*</span>
+                                        <span>숫자2</span>
+                                        <span>;</span>
+                                    </p>
+                                    <p>
+                                        <span class="blue italic">var</span>
+                                        <span>반복</span>
+                                        <span class="red">=</span>
+                                        <span class="violet">true</span>
+                                        <span>;</span>
+                                    </p>
+                                    <p>
+                                        <span class="red">while</span><span class="blue">(</span>
+                                        <span>반복</span>
+                                        <span class="blue">)</span>
+                                        <span class="blue"> {</span>
+                                    </p>
+                                    <div class="run">
+                                        <p>
+                                            <span class="blue italic">var</span>
+                                            <span>답</span>
+                                            <span class="red">=</span>
+                                            <span class="green">prompt</span>
+                                            <span class="yellow">(</span>
+                                            <span class="green"><u>String</u></span>
+                                            <span class="pink">(</span>
+                                            <span>숫자1</span>
+                                            <span class="pink">)</span>
+                                            <span class="red">+</span>
+                                            <span class="lemon">' x '</span>
+                                            <span class="red">+</span>
+                                            <span class="green"><u>String</u></span>
+                                            <span class="pink">(</span>
+                                            <span>숫자2</span>
+                                            <span class="pink">)</span>
+                                            <span class="red">+</span>
+                                            <span class="lemon">' =? '</span><span>,</span>
+                                            <span class="lemon">'구구단을 외자!'</span>
+                                            <span>;</span>
+                                        </p>
+                                        <p>
+                                            <span class="red">if</span>
+                                            <span class="yellow">(</span>
+                                            <span>결과</span>
+                                            <span class="red">===</span>
+                                            <span class="green"><u>Number</u></span>
+                                            <span class="pink">(</span>
+                                            <span>답</span>
+                                            <span class="pink">)</span>
+                                            <span class="yellow">)</span>
+                                            <span class="yellow">{</span>
+                                        </p>
+                                        <div class="run">
+                                            <p>
+                                                <span class="green">alert</span>
+                                                <span class="pink">(</span>
+                                                <span class="lemon">'호옹이@!'</span>
+                                                <span class="pink">)</span>
+                                                <span>;</span>
+                                            </p>
+                                            <p>
+                                                <span>반복</span>
+                                                <span class="red">=</span>
+                                                <span class="violet">false</span>
+                                                <span>;</span>
+                                            </p>
+                                        </div>
+                                        <p>
+                                            <span class="yellow">}</span>
+                                            <span class="red">else if</span>
+                                            <span class="yellow">(</span>
+                                            <span>답</span>
+                                            <span class="red">==</span>
+                                            <span class="violet">null</span>
+                                            <span class="yellow">)</span>
+                                            <span class="yellow">{</span>
+                                        </p>
+                                        <div class="run">
+                                            <p>
+                                                <span class="blue italic">var</span>
+                                                <span>텍스트</span>
+                                                <span class="red">=</span>
+                                                <span class="green">confirm</span>
+                                                <span class="pink">(</span>
+                                                <span class="lemon">'한 번 더?'</span>
+                                                <span class="pink">)</span>
+                                                <span>;</span>
+                                            </p>
+                                            <p>
+                                                <span class="red">if</span>
+                                                <span class="pink">(</span>
+                                                <span>텍스트</span>
+                                                <span class="pink">)</span>
+                                                <span>반복</span>
+                                                <span class="red">=</span>
+                                                <span class="violet">true</span>
+                                                <span>;</span>
+                                            </p>
+                                            <p>
+                                                <span class="red">else</span>
+                                                <span class="pink">{</span>
+                                            </p>
+                                            <div class="run">
+                                                <p>
+                                                    <span class="green">alert</span>
+                                                    <span class="lemon">('구구단 끗~!')</span>
+                                                    <span>;</span>
+                                                </p>
+                                                <p>
+                                                    <span class="red">return</span>
+                                                    <span class="violet">false</span>
+                                                    <span>;</span>
+                                                </p>
+                                            </div>                                            
+                                            <p>
+                                                <span class="pink">}</span>
+                                                <span>;</span>
+                                            </p>
+                                        </div>
+                                        <p>
+                                            <span class="yellow">}</span>
+                                            <span class="red">else</span>
+                                            <span class="green">alert</span>
+                                            <span class="yellow">(</span>
+                                            <span class="lemon">'한 번 더?'</span>
+                                            <span class="yellow">)</span>
+                                            <span>;</span>
+                                        </p>
+                                    </div>
+                                    <p>
+                                        <span class="blue">}</span>
+                                        <span>;</span>
+                                    </p>
+                                </div>   
+                                <p>  
+                                    <span class="pink"> }</span>
+                                    <span>;</span>
+                                </p>                           
+                            </div>
+                            <p>
+                                <span class="yellow">}</span>
+                                <span>;</span>
+                            </p>
+                        </td>
+                        <!--//input-->
+    
+                        <!--output-->   
+                        <td>
+
+                        </td>
+                        <!--output-->   
+
+                        <!--understand-->                
+                        <td> 
+
+                        </td>
+                        <!--//understand-->    
+                    </tr>
+                </tbody>
+            </table>
+            <!-- //table -->
+        </div>
+        <!-- //times table -->
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+           // times_table();
+        });
+
+        function times_tableEg_01() {
+            console.log(Math.random()) //0~1의 값을 추출
+            console.log(Math.random()*9) //소수점 앞에 값을 넣어줌. 0~9 추출
+            console.log(Math.floor(Math.random()*9)) //소수점 내림. 소수점 제거. 0~8 추출
+            console.log(Math.floor(Math.random()*9)+1) //1~9 추출
+
+            var understand = '소괄호는 우선순위를 올려준다.<br>\'Math.floor()\': 소수점 내림, \'Math.ceil()\': 소수점 올림'
+        }
+
+        function times_table() {
+            while(true) { //문제 무한 반복 
+                var 숫자1 = Math.floor(Math.random()*9)+1;
+                var 숫자2 = Math.floor(Math.random()*9)+1;
+                var 결과 = 숫자1*숫자2;
+                var 반복 = true;
+                while(반복) {
+                    var 답 = prompt(String(숫자1) +' x '+ String(숫자2) +' =?', '구구단을 외자!');
+                    if(결과 === Number(답)) {
+                        alert('호옹이@');
+                        반복 = false;
+                    } else if(답 == null) {
+                        var 텍스트 = confirm('한 번 더?');
+                        if(텍스트) 반복 = true;
+                        else  {
+                            alert('구구단 끗~!');
+                            return false;
+                        }
+                    } else alert('한 번 더?');     
+                };
+            };           
+        };
+    </script>
+</body>
+</html>

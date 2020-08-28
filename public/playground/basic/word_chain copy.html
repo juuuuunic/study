@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WORD CHAIN</title>
-    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function(){
      const player_number = document.getElementById('player_number');
@@ -23,19 +23,66 @@ let stopGame = true;
 // 닉네임 입력란 만들기 설정
 const makeNicknameObj = {
   btn : document.createElement('button'),
-  createEl : function(number,targeting){
+  createEl : function(number,el){
+
     for(let i = 0; i < number; i++){
       let player_name = document.createElement('input');
       let player_text = document.createElement('span');
       player_text.textContent = i + 1 + 'player: ';
       this.btn.textContent = '닉네임 설정 후 STATR';
-      targeting.appendChild(player_text);
-      targeting.appendChild(player_name);
-      targeting.appendChild(this.btn);
+      el.appendChild(player_text);
+      el.appendChild(player_name);
+      el.appendChild(this.btn);
     } 
+
+    // for(let i = 1; i < number+1; i++){
+    //   let player_label = document.createElement('label');
+    //   let player_name = document.createElement('input');
+    //   let input__row = document.createElement('div');
+    //   input__row.classList= "input-row player-row"
+    //   player_label.textContent = 'PLAYER. ' +i;
+    //   setAttributes(player_label,{'for':'player'+i});
+    //   setAttributes(player_name, {'type':'text', 'id':'player'+i, 'name':'nickname', 'placeholder':'ENTER PLAYER.'+i+' NICKNAME'});
+    //   this.btn.textContent = '닉네임 설정 후 STATR';
+    //   // targeting.appendChild(player_text);
+    //   // targeting.appendChild(player_name);
+    //   targeting.appendChild(this.btn);
+    //   targeting.appendChild(input__row);
+    //   input__row.appendChild(player_label);
+    //   input__row.appendChild(player_name);
+    // }     
+    
+  //   for(let i = 1; i < number+1; i++){
+  //     let input__row = document.createElement('div');
+  //     let setPlyr = '';
+  //         setPlyr += '<div class="input-row player-row">';
+  //         setPlyr += '<label for="player' +i+ '">PLAYER. ' +i+ '</label>';
+  //         setPlyr += '<input type="text" id="player' +i+ '" name="nickname" placeholder="ENTER PLAYER.' +i+ ' NICKNAME">';
+  //         setPlyr += '</div>';
+  //     this.btn.textContent = '닉네임 설정 후 STATR';
+  //     input__row.classList= "input-row player-row"
+  //     input__row.innerHTML = setPlyr;
+  //     el.appendChild(input__row);
+  //     el.appendChild(this.btn);
+  //   }
   },
 }
-
+const turn_info = document.getElementById('playerList_box');
+const makeLifeObj = {
+  createEl : function(number,el){
+      for(let i = 1; i < number+1; i++){
+    console.log(i)
+        let info__row = document.createElement('div');
+        let setInfo = '';
+            setInfo += '<div class="info-data">';
+            setInfo += '<div class="info-img"></div>';
+            setInfo += '<p>PLAER'+i+'</p>';
+            setInfo += '</div>';
+        info__row.innerHTML = setInfo;
+        el.appendChild(info__row);
+      }
+    }
+}
 // 속성 설정
 propertySet = {
   bundle : function(target, inner, place, text, tf){
@@ -47,6 +94,7 @@ propertySet = {
   falseToggle : function(){
     player_number_btn.textContent = '참가자 인원수';
     player_nickname_Box.innerHTML = '';
+    turn_info.innerHTML = '';
     word_input.placeholder = 'game close!';
     player_number.style.visibility = 'visible';
     turn_display.textContent = '';
@@ -119,13 +167,16 @@ function showNickname(){
 
 // 닉네임 모두 입력 여부 and 빈값 체크
 function checkNickname(){
+  var startNumber = Number(player_number.value);
   checkSpaceName = userNickname.filter(function(element){
     return element.replace(/(\s*)/g, "");  // 빈공간 빼고 배열에 담는다.
   })
   if(checkSpaceName.length === userNickname.length){
+    console.log(checkSpaceName[0])
     showNickname();
     openGame();
-    turn_display.textContent = `Start Player : ${checkSpaceName[0]} 님!! 시작단어를 입력하세요!`;
+    turn_display.innerText = `${checkSpaceName[0]}`+ '님, 시작단어를 \n제시해주세요';
+    makeLifeInput(startNumber);
   }else{
     userNickname = [];
     checkSpaceName = [];
@@ -147,9 +198,12 @@ function makeNicknameInput(number){
   makeNicknameObj.createEl(number, player_nickname_Box);
 }
 
+function makeLifeInput(number){
+  makeLifeObj.createEl(number, turn_info);
+}
 // 게임 참가자 2명 이상인지 확인하기
 function checkNumber(){
-  const startNumber = Number(player_number.value);
+  var startNumber = Number(player_number.value);
   if(startNumber < 2 || isNaN(startNumber)){
     propertySet.bundle(player_nickname_Box,null,null,'2명 이상 플레이 가능! RESET버튼!');
   }else{
@@ -164,11 +218,18 @@ function SwitchToggle(){
   (toggleResetBtn) ? (checkNumber(), propertySet.trueToggle()) : propertySet.falseToggle();
 }
 
+
 // 플레이어 인원 버튼
-player_number_btn.addEventListener('click', SwitchToggle);
+player_number_btn.addEventListener('click', checkNumber);
 
 // 닉네임 저장 버튼
 makeNicknameObj.btn.addEventListener('click', saveNickname);
+
+function setAttributes(el, attrs) {
+  for(var key in attrs) {
+    el.setAttribute(key, attrs[key]);
+  }
+}
     });
     </script>
 
@@ -356,6 +417,11 @@ h1{
         <div id="gameTurn_box">
           <div id="playerList_box"></div>
           <div id="displayTurn_box"></div>
+        </div>
+        <!-- game turn -->
+        <div id="gameInfo_box">
+          <div id="playerInfo_box"></div>
+          <div id="displayInfo_box"></div>
         </div>
         <!-- display word -->
         <div id="displayWord_box"></div>

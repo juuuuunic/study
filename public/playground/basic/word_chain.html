@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORD CHAIN</title>
+    <link type="text/css" rel="stylesheet" href="../css/word_chain.css">
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/word_chain.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () { 
+            document.querySelector('#wrap').style.display = 'none'
+        });
+        window.addEventListener('DOMContentLoaded', function () {             
+            document.querySelector('#wrap').style.display = ''
+            document.querySelector('.spinner').style.display = 'none'
+         });
+    </script>
+
+    <!--IE9만 적용 -->
+	<!--[if IE 9]>
+		<script src="/palyground/js/ie-9.js"></script>
+    	<link rel="stylesheet" type="text/css" href="/palyground/css/ie-9.css" />
+    <![endif]-->
+    
+</head>
+<body>
+    <div class="spinner"></div>
+
+    <!-- wrap -->
+    <div id="wrap">
+        <header>
+            <h1 class="title"><a href="./word_chain.html">끝말잇기</a></h1>
+        </header>
+
+        <!-- content -->
+        <div class="content">
+            <div class="set-up">
+                <div class="how-to">
+                    <h3>How to Play</h3>
+                    <ol>
+                        <li>1. 참가 인원과 닉네임을 설정해주세요.</li>
+                        <li>2. 각자 3개의 <em></em>를 가지고 시작됩니다.</li>
+                        <li>3. 게임 순서는 매 턴마다 <span>랜덤</span>으로 정해지며</li>
+                        <li>4. 끝말잇기에 실패할 때마다 <em></em>는 하나씩 사라집니다.</li>
+                        <li>5. 성공하면 하나씩 추가!</li>
+                        <li>6. 최대 <em></em>는 <span>다섯개</span>랍니다.</li>
+                        <li>7. 화내지 말아주세요:<</li>
+                    </ol>
+                </div>
+                <ul>      
+                    <li class="how-many">
+                        <div class="input-row">
+                            <input type="text" name="people" placeholder="How many People" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+                        </div>
+                    </li>
+                    <li class="who-is hidden">
+                        <div class="input-row player-row">
+                            <label for="player1">PLAYER.1</label>
+                            <input type="text" id="player1" name="nickname" placeholder="ENTER PLAYER.1 NICKNAME">
+                        </div>
+                        <div class="input-row player-row">
+                            <label for="player2">PLAYER.2</label>
+                            <input type="text" id="player2" name="nickname" placeholder="ENTER PLAYER.2 NICKNAME">
+                        </div>
+                    <li>
+                </ul>
+            </div>
+            <div class="set-play hidden">
+                <h1 class="word">하이님, 시작 단어를 <br>제시해주세요.</h1>
+                <form name="word-chain">
+                    <!-- <ul class="play_time clearfix">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul> -->
+            
+                    <div class="input-row">
+                        <input type="text" class="nWord" placeholder="Input your answer" onkeyup="this.value=this.value.replace(/[^ㄱ-힣]/gi,'');">
+                    </div>
+                </form>
+            </div>
+            
+            <!-- button -->
+            <div class="input-row">
+                <input type="button" class="next" value="NEXT">
+            </div>
+            <!-- //button -->
+
+            <div class="set-who hidden">
+                <ul>
+                    <li class="clearfix">
+                        <div class="plyr_info">
+                            <div class="info-data">
+                                <div class="info-img"></div>
+                                <p>PLAER1</p>
+                            </div>
+                            
+                            <div class="info-life">
+                                <!-- //life
+                                <ul class="clearfix">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                -->
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //content -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>
